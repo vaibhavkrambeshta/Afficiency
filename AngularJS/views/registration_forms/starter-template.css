@@ -1967,6 +1967,12 @@ select{
 
 }
 
+.container-padding{
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
 @media screen and (min-width: 1200px){
     .pad-30{
         padding: 0;
@@ -2003,7 +2009,7 @@ select{
         padding: 3px !important;
     }
 }
-@media (max-width: 411px) and (min-width: 320px){
+@media screen and (max-width: 411px) {
     .progress-indicator>li>a{
         font-size: 10px;
     }
@@ -2074,5 +2080,11 @@ select{
     .hr-circle-right {
         right: 2%;
         position: absolute;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .top0lg img {
+        height: 80px;
     }
 }

@@ -66,44 +66,45 @@
     </nav>
 
 
-    <div class="container-fluid">
-        <div class="starter-template st1-patop" id="nav_div" style="z-index:1;width:1180px;">
+    <div class="container-fluid container-padding">
+        <div class="starter-template st1-patop" id="nav_div" style="z-index:1;width:auto;">
             <div class="container-fluid">
             <div class="st1-top">  You are applying for $500,000 of life insurance coverage for 30 years </div>
-            <div class="center-block center-m gry-area">
-            <ul class="progress-indicator">
 
-                  <li class="completed">
-                      <span class="bubble fa-circle-o">  </span>
-                    <a href="#/buy_now" class="steps">Personal Information</a>
-                  </li>
-                  <li class="completed">
-                      <span class="bubble fa-circle-o"></span>
-                      <a href="#/step2" class="steps">Policy Details</a>
-                  </li>
-                  <li class="completed">
-                      <span class="bubble fa-circle-o"></span>
-                    <a href="#/step3" class="steps">Your Beneficiaries</a>
-
-                  </li>
-                  <li class="completed">
-
-                      <span class="bubble"></span>
-                    <a href="#/step4" class="steps">About You</a>
-                  </li>
-                  <li class="completed">
-                      <span class="bubble"></span>
-                    <a href="#/step5" class="steps">Your Health</a>
-                  </li>
-
-                   <li>
-                      <span class="bubble"></span>
-                    <a href="#/step6" class="steps">Confirm</a>
-                  </li>
-              </ul>
-            <div class="pull-right top0lg" id="legal_gerenal_logo" style="margin-top:-100px;"> <img src="views/registration_forms/images/lg.png"/> </div>
-          </div>
         </div>
+            <div class="center-block center-m gry-area">
+                <ul class="progress-indicator">
+
+                    <li class="completed">
+                        <span class="bubble fa-circle-o">  </span>
+                        <a href="#/buy_now" class="steps">Personal Information</a>
+                    </li>
+                    <li class="completed">
+                        <span class="bubble fa-circle-o"></span>
+                        <a href="#/step2" class="steps">Policy Details</a>
+                    </li>
+                    <li class="completed">
+                        <span class="bubble fa-circle-o"></span>
+                        <a href="#/step3" class="steps">Your Beneficiaries</a>
+
+                    </li>
+                    <li class="completed">
+
+                        <span class="bubble"></span>
+                        <a href="#/step4" class="steps">About You</a>
+                    </li>
+                    <li class="completed">
+                        <span class="bubble"></span>
+                        <a href="#/step5" class="steps">Your Health</a>
+                    </li>
+
+                    <li>
+                        <span class="bubble"></span>
+                        <a href="#/step6" class="steps">Confirm</a>
+                    </li>
+                </ul>
+                <div class="pull-right top0lg" id="legal_gerenal_logo" style="margin-top:-100px;"> <img src="views/registration_forms/images/lg.png"/> </div>
+            </div>
       </div>
 
 
@@ -124,7 +125,7 @@
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <div class="row">
+                                <div class="row margin-left">
                                     <div id="yourHealthDiv">
                                         <div class="col-md-12 main_lab">
                                             <div class="col-md-3">
@@ -169,10 +170,10 @@
 
                                         <div class="col-md-12 main_lab main_row">
                                             <div class="col-md-6 app_row">
-                                                <div class="row">
+                                                <div class="">
                                                     <label class="question">Has your weight changed by over 10 lbs in the last year?</label>
                                                 </div>
-                                                <div class="row">
+                                                <div class="">
                                                     <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
                                                     <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
                                                 </div>
@@ -181,10 +182,10 @@
 
                                         <div class="col-md-9 main_lab main_row">
                                             <div class="col-md-12 app_row">
-                                                <div class="row">
+                                                <div class="">
                                                     <label class="question">Estimated change in the weight in the last year</label>
                                                 </div>
-                                                <div class="row">
+                                                <div class="">
                                                     <div class="col-md-12" style="padding-left:0px;">
                                                         <input type="number" ng-model="est_weight_change" style="width: 100%; max-width: inherit;"
                                                         placeholder="If weigth loss, enter a negative value" />
@@ -195,10 +196,10 @@
 
                                         <div class="col-md-9 main_lab main_row">
                                             <div class="col-md-12 app_row">
-                                                <div class="row">
+                                                <div class="">
                                                     <label class="question">Reason for weight change</label>
                                                 </div>
-                                                <div class="row">
+                                                <div class="">
                                                     <div class="col-md-12" style="padding-left:0px;">
                                                         <input type="text" ng-model="reason_weight_change" style="width: 100%; max-width: inherit;"
                                                         placeholder="Reason" maxlength="200" />
@@ -213,1102 +214,7 @@
                                 <!-- <div class="box-tools pull-right>
                                   <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#primaryPhysicalInfoDiv"><i class="fa fa-minus"></i></button>
                                 </div> -->
-                                <div class="row">
-                                    <div class="box-header with-border">
-                                        <h3 class="box-title top-td">
-                                            <img src="views/registration_forms/images/arr.png" class="img3" />
-                                            Primary Physician Information
-                                        </h3>
-                                        <div class="box-tools pull-right">
-                                            <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#primaryPhysicalInfoDiv"><i class="fa fa-minus"></i></button>
-                                        </div>
-                                    </div>
 
-                                    <div id="primaryPhysicalInfoDiv">
-                                        <div class="col-md-6 main_lab main_row">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">Name</label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-12" style="padding-left:0px;">
-                                                        <input type="text" ng-model="physician_name" style="width: 100%; max-width: inherit;" maxlength="50" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-9 main_lab main_row">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">Address</label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-12" style="padding-left:0px;">
-                                                        <input type="text" ng-model="physician_address" style="width: 100%; max-width: inherit;" maxlength="150" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-md-12 main_lab main_row">
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="lableo">Telephone</label>
-                                                    <input type="number" class="form-control" ng-model="physician_telephone">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="lableo">Date Last Seen</label>
-                                                    <input type="date" class="form-control" ng-model="last_seen">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-9 main_lab main_row">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">Reason last seen and result of visit</label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-12" style="padding-left:0px;">
-                                                        <input type="text" ng-model="last_seen_reason" style="width: 100%; max-width: inherit;"
-                                                        placeholder="Reason" maxlength="100" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="box-header with-border row_header" style="margin-left:10px;">
-                                        <h3 class="box-title top-td">
-                                            <img src="views/registration_forms/images/arr.png" class="img3" />
-                                            Physician Last Consulted
-                                        </h3>
-                                        <div class="box-tools pull-right">
-                                            <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#physicianLeadDiv"><i class="fa fa-minus"></i></button>
-                                        </div>
-                                    </div>
-
-                                    <div id="physicianLeadDiv">
-                                        <div class="col-md-9 main_lab main_row">
-                                            <div class="col-md-9">
-                                                <div class="form-group">
-                                                    <label class="lableo">Name</label>
-                                                    <input type="text" class="form-control" ng-model="last_physician_name" style="max-width: inherit;" maxlength="50">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="lableo">Specialty</label>
-                                                    <input type="text" class="form-control" ng-model="last_physician_speciality" maxlength="50">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-9 main_lab main_row">
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                    <label class="lableo">Address</label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <input type="text" ng-model="physician_address" style="width: 100%; max-width: inherit;" maxlength="150" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 main_lab main_row">
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="lableo">Telephone</label>
-                                                    <input type="number" class="form-control" ng-model="physician_telephone">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="lableo">Date Last Seen</label>
-                                                    <input type="date" class="form-control" ng-model="last_seen">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-9 main_lab main_row">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">Reason last seen and result of visit</label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-12" style="padding-left:0px;">
-                                                        <input type="text" ng-model="last_seen_reason" style="width: 100%; max-width: inherit;"
-                                                        placeholder="Reason" maxlength="150" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Medical Questions Here-->
-                                <div class="row">
-                                    <div class="box-header with-border">
-                                        <h3 class="box-title top-td">
-                                            <img src="views/registration_forms/images/arr.png" class="img3" />
-                                            Medical Questions
-                                        </h3>
-                                        <div class="box-tools pull-right">
-                                            <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#medicalQuestionsDiv"><i class="fa fa-minus"></i></button>
-                                        </div>
-                                    </div>
-
-
-                                    <div id="medicalQuestionsDiv">
-                                        <div class="col-md-12 main_lab main_row">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Are you currently taking or have you been advised to take any prescribed medication other than contraceptives?
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Are you currently taking any herbal or non-prescription medicication at least weekly?
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Have you taken any other medications in the past 2 years?
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <!-- IN Last 5 years -->
-                                <div class="row">
-                                    <div class="box-header with-border">
-                                        <h3 class="box-title top-td">
-                                            <img src="views/registration_forms/images/arr.png" class="img3" />
-                                            In the last 5 years have you ...
-                                        </h3>
-                                        <div class="box-tools pull-right">
-                                            <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#last5YearsDiv"><i class="fa fa-minus"></i></button>
-                                        </div>
-                                    </div>
-
-                                    <div id="last5YearsDiv">
-                                        <div class="col-md-12 main_lab main_row">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Been treated by a member of the medical profession or at a medical facility?
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Had an electrocardiogram, x-ray, blood test or other diagnostic test,
-                                                        excluding an HIV test?
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Had surgery or biopsy, or been an inpatient or outpatient in a hospital,
-                                                        clinic, or other medical or mental health facility?
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Been advised by a member of the medical profession to have surgery,
-                                                        medical treatment, biopsy or diagnostic testing, excluding HIV testing,
-                                                        that has not yet been completed?
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Been referred to any other member of the medical profession
-                                                        or medical facility?
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Been unable to work, attend school or perform normal activities
-                                                        of like age and gender, or been confined at home?
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <!-- Have you ever consulted -->
-                                <div class="row">
-                                    <div class="box-header with-border">
-                                        <h3 class="box-title top-td">
-                                            <img src="views/registration_forms/images/arr.png" class="img3" />
-                                            Have you ever consulted a member of the medical profession regarding
-                                            or have you been diagnosed or treated for ...
-                                        </h3>
-                                        <div class="box-tools pull-right">
-                                            <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#diagnosedDiv"><i class="fa fa-minus"></i></button>
-                                        </div>
-                                    </div>
-
-                                    <div id="diagnosedDiv">
-                                        <label style="color:#FF9600;" class="lableo">
-                                            <i>
-                                                <span class="label label-warning">i</span>
-                                                If you are not sure between 2 options, select the one you believe is correct
-                                            </i>
-                                        </label>
-                                        <div class="col-md-12 main_lab main_row">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Disease or disorder of the heart or blood vessels
-                                                    </label>
-                                                </div>
-                                                <div class="row" style="padding-left:7px;">
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline" style="padding-left:0px;">
-                                                            <input type="checkbox" name="c1" value=""><span class="cb_lbl">Angina</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c1"><span class="cb_lbl">Phlebitis</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c1"><span class="cb_lbl">Chest Pain</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c1"><span class="cb_lbl">Irregular heart rhythm</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c1"><span class="cb_lbl">High blood pressure</span>
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline" style="padding-left:0px;">
-                                                            <input type="checkbox" name="c1" value=""><span class="cb_lbl">Heart attack</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c1"><span class="cb_lbl">High cholestrol</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c1"><span class="cb_lbl">Palpitations</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c1"><span class="cb_lbl">Abnormal electrocardiogram</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c1"><span class="cb_lbl">Heart Murmur</span>
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="col-md-4">
-                                                        <label class="checkbox-inline" style="padding-left:0px;">
-                                                            <input type="checkbox" name="c1" value=""><span class="cb_lbl">Peripheral vascular disease</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-5">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c1"><span class="cb_lbl">
-                                                                Any other disease or disorder of the heart or blood vessels
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c1"><span class="cb_lbl">None of these</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Disease or disorder of the stomach
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c2"><span class="cb_lbl">GERD</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c2"><span class="cb_lbl">Colitis</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c2"><span class="cb_lbl">Internal bleeding</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c2"><span class="cb_lbl">Ulcer</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c2"><span class="cb_lbl">Hepatitis</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c2"><span class="cb_lbl">Acid reflux</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c2"><span class="cb_lbl">
-                                                                Any other disease or disorder of the stomach, gall bladder, esophagus, liver,
-                                                                pancreas, spleen, intestine, colon, or rectum?
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c2"><span class="cb_lbl">
-                                                                None of these
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Disorder of your blood or immune system
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c3"><span class="cb_lbl">Anemia</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c3"><span class="cb_lbl">Blood clots</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c3"><span class="cb_lbl">Lymphoma(excluding HIV)</span>
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c3"><span class="cb_lbl">Leukemia</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c3"><span class="cb_lbl">Bleeding</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c3"><span class="cb_lbl">Immune deficiency</span>
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="col-md-12">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c3"><span class="cb_lbl">
-                                                                Any other disorder of your blood or immune system
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Malignant disorder
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c4"><span class="cb_lbl">Cancer</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c4"><span class="cb_lbl">Tumor</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c4"><span class="cb_lbl">Melanoma</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c4"><span class="cb_lbl">Any other malignant disorder</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c4"><span class="cb_lbl">None of these</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Endocrine system
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c5"><span class="cb_lbl">Diabetes</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-5">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c5"><span class="cb_lbl">
-                                                                Any other disease or disorder of the thyroid
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-5">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c5"><span class="cb_lbl">
-                                                                Any other disease or disorder of the endocrine glands
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c5"><span class="cb_lbl">
-                                                                High blood sugar
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-5">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c5"><span class="cb_lbl">
-                                                                Any other disease or disorder of the pituitary
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-5">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c5"><span class="cb_lbl">
-                                                                None of these
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Skin or Lymph nodes
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c6"><span class="cb_lbl">Cyst</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c6"><span class="cb_lbl">
-                                                                Lump
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c6"><span class="cb_lbl">
-                                                                Any other disease or disorder of the skin or lymph nodes
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c6"><span class="cb_lbl">polyp</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c6"><span class="cb_lbl">
-                                                                Skin growth
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c6"><span class="cb_lbl">
-                                                                None of these
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Any disease or disorder of the
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c7"><span class="cb_lbl">Breast</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c7"><span class="cb_lbl">
-                                                                Reproductive system
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c7"><span class="cb_lbl">Prostate</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c7"><span class="cb_lbl">
-                                                                None of these
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Any sexually transmitted diseases or disorders
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Resporatory
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c8"><span class="cb_lbl">Asthma</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c8"><span class="cb_lbl">
-                                                                Bronchitis
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c8"><span class="cb_lbl">Emphysema</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c8"><span class="cb_lbl">
-                                                                TB(Tuberculosis)
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c8"><span class="cb_lbl">
-                                                                Chronic cough or hoarseness
-                                                            </span>
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c8"><span class="cb_lbl">Sleep apnea</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c8"><span class="cb_lbl">
-                                                                Sarcoidosis
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c8"><span class="cb_lbl">
-                                                                Pneumonia
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c8"><span class="cb_lbl">
-                                                                Shortness of breath
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c8"><span class="cb_lbl">
-                                                                Any other disorder of respiratory system
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c8"><span class="cb_lbl">
-                                                                COPD(Chronic obstructive pulmonary disease)
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c8"><span class="cb_lbl">
-                                                                None of these
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Nervous system
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c9"><span class="cb_lbl">Stroke</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c9"><span class="cb_lbl">Tremors</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c9"><span class="cb_lbl">Paralysis</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c9"><span class="cb_lbl">
-                                                                Spinal cord disorder
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c9"><span class="cb_lbl">
-                                                                TIA(Transient Ischemic Attack)
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c9"><span class="cb_lbl">Bulimea</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c9"><span class="cb_lbl">Depression</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c9"><span class="cb_lbl">Suicidal thoughts</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c9"><span class="cb_lbl">
-                                                                Attempts of suicide
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c9"><span class="cb_lbl">
-                                                                Any other mental, nervous or emotional disorder
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <label class="checkbox-inline">
-                                                            <input type="checkbox" value="" name="c9"><span class="cb_lbl">
-                                                                None of these
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Arthritis or disorder of the bones, skin or muscles
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Any disease or disorder of the eyes, nose, ears or throat
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        In the past 5 years have you dianosed, treated, tested positive
-                                                        for, or been given adivse by a member of the medical profession
-                                                        for any disease or disorder not previously stated in this application
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label class="lableo">Drug Name</label>
-                                                            <input type="text" class="form-control" ng-model="drug_name" maxlength="100">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label class="lableo">Drug Started</label>
-                                                            <input type="date" class="form-control" ng-model="drug_started">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label class="lableo">Drug Stopped</label>
-                                                            <input type="date" class="form-control" ng-model="drug_stopped">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
-                                                            <label class="lableo">Amount and Frequency of use</label>
-                                                            <input type="text" class="form-control" ng-model="amount_freq" maxlength="200">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <div class="form-group col-md-5">
-                                                            <div style="border:1px solid grey; border-radius:20px;height:40px;text-align:center;padding-top:10px;color:grey;cursor:pointer;font-size:15px;">
-                                                                + Add another drug details
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Have you ever consumed alcoholic beverages?
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label class="lableo">Alcohol Type</label>
-                                                            <input type="text" class="form-control" ng-model="alcohol_type" maxlength="50">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label class="lableo">Number of drinks</label>
-                                                            <input type="number" class="form-control" ng-model="num_of_drinks" maxlength="50">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label class="lableo">Frequency</label>
-                                                            <input type="text" class="form-control" ng-model="drink_frequency" maxlength="50">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Have you ever been advised by a physician or other licensed
-                                                        medical practitioner to limit or cease the use of alcoholic
-                                                        beverages?
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Have you ever been consulted, sought help or treatment, or
-                                                        been advised by a physician or other licensed medical practitioner
-                                                        to undergo conseling or treatment for alcoholic problems?
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12 app_row">
-                                                <div class="row">
-                                                    <label class="question">
-                                                        Has parent or sibling ever been disnosed or treated by a member
-                                                        of medical profession for heart or kidney disease, stroke, diabetes,
-                                                        cancer, melanoma, suicide, Huntington's Disease, Sick Cell Disease or
-                                                        Familal Adenomatous Polyposis (FAP)?
-                                                    </label>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                    <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-md-12 main_lab main_row" style="padding-top:20px;">
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label class="lableo">Relationship</label>
-                                                            <input type="text" class="form-control" ng-model="relationship" maxlength="50">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label class="lableo">Medical Conditions</label>
-                                                            <input type="text" class="form-control" ng-model="num_of_drinks" maxlength="50">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label class="lableo">Age at Onset/Event</label>
-                                                            <input type="number" class="form-control" ng-model="drink_frequency" maxlength="50">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label class="lableo">Are they still living ?</label>
-                                                            <div class="row" style="padding-left:30px;">
-                                                                <label class="checkbox-inline" style="padding-left:0px;"><input type="radio" value="" name="wg"><span class="rd_lbl">Yes</span></label>
-                                                                <label class="checkbox-inline"><input type="radio" value="" name="wg"><span class="rd_lbl">No</span></label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <label class="lableo">Current Age</label>
-                                                        <input type="number" class="form-control" ng-model="current_age">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-5">
-                                                        <div style="border:1px solid grey; border-radius:20px;height:40px;text-align:center;padding-top:10px;color:grey;cursor:pointer;font-size:15px;">
-                                                            + Add another family history details
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1316,6 +222,186 @@
             </div>
         </div>
 
+        <div class="box panel-eh">
+            <div class="row pad-30" style="padding-bottom:50px;">
+                <div class="col-xs-10 col-md-offset-1">
+                    <div class="box panel-eh">
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title top-td">
+                                    <img src="views/registration_forms/images/arr.png" class="img3" />
+                                    Primary Physician Information
+                                </h3>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#primaryPhysicalInfoDiv"><i class="fa fa-minus"></i></button>
+                                </div>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row margin-left">
+                                    <div id="primaryPhysicalInfoDiv">
+                                        <div class="col-md-12 main_lab">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="lableo">Name</label>
+                                                    <input type="text" ng-model="physician_name" style="width: 100%; max-width: inherit;" maxlength="50" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 main_lab main_row">
+                                            <div class="col-md-12 app_row">
+                                                <div class="">
+                                                    <label class="question">Address</label>
+                                                </div>
+                                                <div class="">
+                                                    <div class="col-md-12" style="padding-left:0px;">
+                                                        <input type="text" ng-model="reason_weight_change" style="width: 100%; max-width: inherit;"
+                                                               placeholder="" maxlength="200" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 main_lab">
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="lableo">Telephone</label>
+                                                    <input type="number" class="form-control" ng-model="physician_telephone">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="lableo">Date Last Seen</label>
+                                                    <input type="date" class="form-control" ng-model="last_seen">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="col-md-9 main_lab main_row">
+                                            <div class="col-md-12 app_row">
+                                                <div class="">
+                                                    <label class="question">Reason last seen and result of visit</label>
+                                                </div>
+                                                <div class="">
+                                                    <div class="col-md-12" style="padding-left:0px;">
+                                                        <input type="text" ng-model="reason_weight_change" style="width: 100%; max-width: inherit;"
+                                                               placeholder="Reason" maxlength="200" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- <div class="box-tools pull-right>
+                                  <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#primaryPhysicalInfoDiv"><i class="fa fa-minus"></i></button>
+                                </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box panel-eh">
+            <div class="row pad-30" style="padding-bottom:50px;">
+                <div class="col-xs-10 col-md-offset-1">
+                    <div class="box panel-eh">
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title top-td">
+                                    <img src="views/registration_forms/images/arr.png" class="img3" />
+                                    Physician Last Consulted
+                                </h3>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#physicianLeadDiv"><i class="fa fa-minus"></i></button>
+                                </div>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="row margin-left">
+                                    <div id="physicianLeadDiv">
+                                        <div class="col-md-12 main_lab">
+                                            <div class="col-md-9">
+                                                <div class="form-group">
+                                                    <label class="lableo">Name</label>
+                                                    <input type="text" ng-model="physician_name" style="width: 100%; max-width: inherit;" maxlength="50" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="lableo">Name</label>
+                                                    <input type="text" ng-model="physician_name" style="width: 100%; max-width: inherit;" maxlength="50" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 main_lab main_row">
+                                            <div class="col-md-12 app_row">
+                                                <div class="">
+                                                    <label class="question">Address</label>
+                                                </div>
+                                                <div class="">
+                                                    <div class="col-md-12" style="padding-left:0px;">
+                                                        <input type="text" ng-model="reason_weight_change" style="width: 100%; max-width: inherit;"
+                                                               placeholder="" maxlength="200" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 main_lab">
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="lableo">Telephone</label>
+                                                    <input type="number" class="form-control" ng-model="physician_telephone">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="lableo">Date Last Seen</label>
+                                                    <input type="date" class="form-control" ng-model="last_seen">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="col-md-9 main_lab main_row">
+                                            <div class="col-md-12 app_row">
+                                                <div class="">
+                                                    <label class="question">Reason last seen and result of visit</label>
+                                                </div>
+                                                <div class="">
+                                                    <div class="col-md-12" style="padding-left:0px;">
+                                                        <input type="text" ng-model="reason_weight_change" style="width: 100%; max-width: inherit;"
+                                                               placeholder="Reason" maxlength="200" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- <div class="box-tools pull-right>
+                                  <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#primaryPhysicalInfoDiv"><i class="fa fa-minus"></i></button>
+                                </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- st -->
         <div class="box panel-eh">
             <div class="row pad-30">
@@ -1364,7 +450,7 @@
         <div class="clearfix"> </div>
     </div>
 
-    <script>
+    <!-- <script>
         $(document).ready(function () {
             $(window).bind('scroll', function () {
                 var navHeight = $(window).height() - 460;
@@ -1380,7 +466,7 @@
                 }
             });
         });
-    </script>
+    </script> -->
 
 </body>
 </html>
