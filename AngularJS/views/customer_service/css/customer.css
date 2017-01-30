@@ -1,0 +1,325 @@
+ /*customer_home page*/
+
+ .black-block{
+        height:80px;
+        margin:auto;
+        background-color: black;
+    }
+ .cus-bar .cus-index, .cus-bar .cus-index:visited{
+        color:white;
+        font-size: 18px;
+        padding:15px;
+        text-align: center;
+    }
+ .cus-bar .cus-index:hover{
+        color: rgba(27,188,160,1);
+    }
+ .content{
+        background-color: white;
+        height:auto;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .container .container-fluid{
+     
+    }
+    .sum-title{
+        color:rgba(0,164,228,1);
+        font-weight: 400;
+        font-size: 26px;    }
+    .sum-title:before,
+    .sum-title:after{
+ background-color: rgba(0,164,228,1);
+ content: "";
+ display: inline-block;
+ height: 2px;
+ position: relative;
+ vertical-align: middle;
+ width: 5%;
+    }
+    .sum-title:before{
+    right: 0.5em;
+    }
+    .sum-title:after{
+    left: 0.5em;
+    }
+
+
+       .sum-form .panel-heading{
+        background-color: black;
+        color: white;
+        font-size: 15px;
+    }
+    .sum-form{
+        margin-top: 30px;
+    }
+    .bs-callout {
+padding-left: 20px;
+margin: 20px 0;
+border-left: 5px solid rgb(23,158,214);
+text-align: left;
+}
+
+.bs-callout h2 {
+    margin-top: 0px;
+color: rgb(23,158,214);
+}
+.bs-callout h1{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color:black;
+    font-size: 24px;
+}
+.bs-callout p{
+    font-size: 16px;
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*customer_home page end*/
+
+
+/*policy page*/
+/*overall*/
+        .edit{
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+        }
+        .edit:hover{
+            cursor: pointer;
+        }
+        .sum-form2{
+            margin: 0 80px;
+        }
+        .sum-form2 .panel-heading{
+            text-align: left;
+            font-size: 20px;
+            background-color: black;
+            color: white;
+        }
+        .sum-form2 .panel-body{
+            padding: 50px;
+        }
+        .sum-form2 .bs-callout{
+            border-left: none;
+        }
+        .sum-form2 .bs-callout h2{
+            font-size: 19px;
+        }
+        .sum-form2 .bs-callout h1{
+            font-size: 18px;
+        }
+        .sum-hr{
+            height: 2px;
+            background-color: lightgrey;
+        }
+        .green-row h2{
+            color:rgb(55,160,119);
+        }
+        .orange-row h2{
+            color:rgb(216,95,66);
+        }
+        .purple-row h2{
+            color:rgb(108,35,166);
+        }
+        .pop{
+            display: none;
+            position: absolute;
+            left: 150px;
+            top: -20px;
+            background-color:white;
+            border: 1px solid black;
+            padding:10px 5px;
+            border-radius: 5px;
+        }
+        .pop p{
+            font-size: 14px;
+        }
+        .premium-pop a:hover,  .pay-pop a:hover{
+            cursor:pointer;
+        }
+        .premium-pop hr{
+            margin: 6px 0px;
+            background-color: rgb(23,158,214);
+            height: 2px;
+        }
+        .arr{
+            margin-right: 5px;
+        }
+/*end of overall*/
+
+
+/*modals*/
+.modal-hr{
+    margin-top: 3px;
+    background-color:#46b8da;
+    height: 2px;
+}
+.modal-body{
+   padding: 0px 50px;
+   color: black;
+}
+.modal-h2, .modal-footer{
+    text-align: center;
+}
+.modal-h2{
+    color:black;
+}
+#preModal{
+   color: black;
+   text-align: left;
+}
+#preModal #frequency, #preModal #month{
+ width: 200px;
+ display: inline-block;
+ margin-bottom: 0px;
+}
+#preModal select{
+    overflow-y: scroll;
+}
+#preModal p{
+    font-size: 14px;
+    color:black;
+}
+
+.confirmModal{
+    top:160px;
+}
+.confirmModal .container-fluid{
+    font-size: 20px;
+    text-align: left;
+    padding: 30px;
+    color: black;
+}
+
+/*label format*/
+#payModal label,#owner-detail label,#benefitModal label{
+    text-align: left;
+    float: left;
+    color:black;
+    font-size: 14px;
+    font-weight: 400;
+}
+#payModal .pay-content{
+    padding-top: 20px;
+}
+#ownerModal p{
+    text-align: left;
+    font-size: 14px;
+}
+#ownerModal{
+    top: 80px;
+}
+
+#owner-detail .modal-dialog{
+    width: 1000px;
+    height:600px;
+}
+#owner-detail .sum-form2{
+    margin:5px 0px;
+    text-align: left;
+}
+#owner-detail .sum-form2 .panel-body{    
+    padding: 20px;
+    height: 500px;
+    overflow-y: scroll;
+}
+#owner-detail p{
+    font-size: 16px;
+}
+#owner-detail .sign-row label{
+    text-align: right;
+    margin-top: 15px;
+}
+.sign-row input[type="text"]{
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid black;
+}
+.addBtn{
+    border: 1px solid #46b8da; 
+    width: 150px;
+    border-radius: 10px; 
+    height: 30px; 
+    text-align: center; 
+    color: #93E4F4; 
+    font-size: 15px;
+    background-color: transparent;
+}
+#owner-detail .radioPart{
+    margin-top: 35px;
+    font-size: 16px;
+}
+
+#benefitModal .modal-dialog{
+    width: 700px;
+}
+
+
+#benefitModal table{
+    font-size: 14px;
+}
+/*end of modals*/
+
+
+/*billing info page*/
+#billInfo{
+    text-align: left;
+    color: #46b8da;
+}
+#history{
+    margin-top: 40px;
+    text-align: left;
+    color: rgb(216,95,66);
+}    
+#history .modal-hr{
+    background-color: rgb(216,95,66);
+}
+#history table th{
+    color: rgb(216,95,66);
+    font-size: 16px;
+}
+#history table td{
+    color: black;
+    font-size: 16px;
+}
+#billInfo p, #history p{
+    color: black;
+    font-size: 14px;
+}
+#bill .panel-body{
+    padding-top: 20px;
+    height:600px;
+}
+
+
+
+/*document page*/
+#doc #msg{
+    margin:0 0 0 20px;
+    padding:0px;
+}
+#doc #mydoc{
+    margin:0 20px 0 0;
+    padding:0px;
+}
+#doc .panel-heading{
+    text-align: center;
+}
+#doc .panel-body {
+    padding: 40px 5px;
+}
+#doc{
+    font-size: 16px;
+}
+#doc #msg table th{
+    text-align: center;
+     color: rgb(216,95,66);
+}
+
+#doc #mydoc table th{
+    text-align: center;
+     color: #46b8da;
+}

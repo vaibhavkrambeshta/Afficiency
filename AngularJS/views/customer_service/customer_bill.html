@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../favicon.ico">
+	<title>Starter Template for Bootstrap</title>
+	<!-- Custom styles for this template -->
+	<script href="views/customer_service/js/jquery_v3_1_1.min.js"></script>
+	<script src="views/customer_service/js/bootstrap.min.js"></script>
+
+	<!--     <link rel="import" href="views/customer_service/Modal.html"> -->
+	<link href="views/customer_service/css/starter-template.css" rel="stylesheet">
+	<link href="views/customer_service/css/customer.css" rel="stylesheet">
+
+
+
+
+</head>
+
+
+<body class="skin-black">
+
+	<nav class="navbar navbar-inverse navbar-fixed-top top-nav">
+		<div class="container-fluid ">
+			<div class="navbar-header">
+				<img src="views/registration_forms/images/logo.png" class="img" />
+			</div>
+			<div class="navbar-right ">
+				<ul class="nav navbar-nav">
+					<li class="dropdown user user-menu">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<i class="glyphicon glyphicon-user"></i>
+							<span>Jane Doe <i class="caret"></i></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li class="user-header bg-light-blue">
+								<img alt="User Image" class="img-circle" src="views/registration_forms/img/avatar3.png">
+								<p>
+									Jane Doe - Web Developer
+									<small>Member since Nov. 2012</small>
+								</p>
+							</li>
+							<li class="user-body">
+								<div class="col-xs-4 text-center">
+									<a href="#">Followers</a>
+								</div>
+								<div class="col-xs-4 text-center">
+									<a href="#">Sales</a>
+								</div>
+								<div class="col-xs-4 text-center">
+									<a href="#">Friends</a>
+								</div>
+							</li>
+							<!-- Menu Footer-->
+							<li class="user-footer">
+								<div class="pull-left">
+									<a class="btn btn-default btn-flat" href="#">Profile</a>
+								</div>
+								<div class="pull-right">
+									<a class="btn btn-default btn-flat" href="#">Sign out</a>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div> </div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<style>
+		.dropdown:hover .dropdown-menu {
+			display: block;
+			background-color: black;
+			color: white;
+			left: 200px;
+			top: 70px;
+		}
+		#drop-policy > li > a {
+			color: white;
+		}
+		.dropdown-menu{}
+	</style>
+
+	<div class="container-fluid">
+		<div class="starter-template st1-patop" id="nav_div" style="z-index:1;width:100%;height:140px;">
+			<div class="black-block">
+				<div class="container-fluid">
+					<ul class="cus-bar">
+						<li>
+							<a href="#!/customer_home" class="cus-index col-md-2">Home</a>
+						</li>
+						<li class="dropdown">
+							<a href="#!/customer_policy" class="cus-index col-md-2 dropdown-toggle">Policy <p>Details</p></a>
+							<ul class="dropdown-menu" id="drop-policy">
+								<li><a  href="#/customer_policy" ><p>Term Life STI-xxx-1234</p>
+									<p>$500 coverage</p>
+									<p>from 03/16/2015 to 03/15/2035</p></a></li>
+									<li role="separator" class="divider"></li>
+									<li><a  href="#/customer_policy" ><p>Term Life STI-xxx-1234</p>
+										<p>$500 coverage</p>
+										<p>from 03/16/2015 to 03/15/2035</p></a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#!/customer_bill" class="cus-index col-md-2">Payments & <p>Billing</p></a>
+								</li>
+								<li>
+									<a href="#!/customer_doc" class="cus-index col-md-2">Message & Documents</a>
+								</li>
+								<li>
+									<a href="#!/custom5" class="cus-index col-md-2">Get Further Insurance</a>
+								</li>
+								<li>
+									<a href="#!/custom6" class="cus-index col-md-2">Make a <p>Claim</p></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="content" style="margin:0 auto; display:block;">
+					<div class="container-fluid" id="bill" >
+						<div class="sum-form2 panel panel-default" >
+							<div class="panel-heading">Payment and Billing Information for policy STI-XXX-1234</div>
+							<div class="panel-body">
+								<div class="container-fluid">
+									<div id="billInfo"">
+										<h2> Billing information</h2>
+										<hr class="modal-hr">
+										<h2> Billing Frequency<img class="edit freEdit" src="views/customer_service/img/edit.png"></h2>
+										<p> You currently pay $33.00 monthly on the 5th day of every month.</p>
+										<h3>Paid With<img class="edit methodEdit" src="views/customer_service/img/edit.png"></h3>
+										<p> American Express account ending in 5467.</p>
+									</div>
+                                    <div id="history">
+                                     <h2>Payment History</h2>
+									<hr class="modal-hr">
+									<table class="table table-sm">
+										<thead>
+											<tr>
+												<th>Date</th>
+												<th>Transaction</th>
+												<th>Amount</th>
+												<th>Description</th>
+												<th>Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>05/23/2016</td>
+												<td>12345</td>
+												<td>$33.00</td>
+												<td>Monthly premium</td>
+												<td>Approved</td>
+											</tr>
+										</tbody>
+									</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="footer main-bg">
+						<div class="pull-right">
+							<ul class="main-so">
+								<li>
+									<img src="views/registration_forms/images/fb.png" />
+								</li>
+								<li>
+									<img src="views/registration_forms/images/tw.png" />
+								</li>
+								<li>
+									<img src="views/registration_forms/images/in.png" />
+								</li>
+								<li>
+									<img src="views/registration_forms/images/g.png" />
+								</li>
+							</ul>
+						</div>
+						<div>
+							<strong>Copyright</strong> Example Company &copy; 2014-2017
+						</div>
+						<div class="clearfix"> </div>
+
+
+
+						<!-- duplicate modals -->
+<!-- Modal -->
+					<!-- premodal -->
+					<div class="modal fade" id="preModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content ">
+								<div class="container-fluid">
+									<h2 class="modal-h2">You currently pay Monthly on the 5th day of the month</h2>
+									<hr class="modal-hr">
+									<div class="modal-body">
+										<div class="form-group">
+											<h5 for="frequency">Change frequency to</h5>
+											<select class="form-control" id="frequency">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<h5 for="month">Day of the month</h5>
+											<select class="form-control" id="month">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+												<option>6</option>
+												<option>7</option>
+												<option>8</option>
+												<option>9</option>
+												<option>10</option>
+												<option>11</option>
+												<option>12</option>
+												<option>13</option>
+												<option>14</option>
+												<option>15</option>
+												<option>16</option>
+												<option>17</option>
+												<option>18</option>
+												<option>19</option>
+												<option>20</option>
+												<option>21</option>
+												<option>22</option>
+												<option>23</option>
+												<option>24</option>
+												<option>25</option>
+												<option>26</option>
+												<option>27</option>
+												<option>28</option>
+											</select>
+										</div>
+										<p>By changing to annual payments you will pay $420 every year.</p>
+										<p>Since your policy is paid up to 05/16/2016. you next payment will be for the lesser amount of $400</p>
+										<p>We are scheduling you next payment for 04/01/2016. Subsequent payments will be every year after that.</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-info" id="confirm-btn">Confirm</button>
+									<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- end of preModal -->
+
+
+
+					<!-- confirmModal frequency -->
+					<div class="modal fade confirmModal" id="confirmModal-frequency" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content ">
+								<div class="container-fluid">
+									<p>Your payment frequency has been changed and we have emailed you a confirmation at</p>
+									<p>beatriz.nallar@example.com</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- end of confirmModal frequency       -->
+
+
+
+					<!-- payModal -->
+					<div class="modal fade" id="payModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content ">
+								<div class="container-fluid">
+									<h2 class="modal-h2">You currently pay Monthly on the 5th day of the month</h2>
+									<hr class="modal-hr">
+									<div class="modal-body">
+										<h2>Please provide your new billing information</h2>
+										<div class="col-md-8 col-md-offset-2 pay-content">
+											<div class="form-group">
+												<label for="method">Method of payment</label>
+												<select class="form-control" id="method">
+													<option>Bank Account Withdrawal</option>
+													<option>Credit/Debit</option>
+												</select>
+											</div>
+
+											<!-- withdraw part -->
+											<div id="withdraw-part">
+												<div class="form-group">
+													<label for="method">Bank Account Type</label>
+													<select class="form-control" id="method">
+														<option>Checking's Account</option>
+														<option>Saving's Account</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<label for="formGroupExampleInput">Bank Routing Number</label>
+													<input type="text" class="form-control" id="formGroupExampleInput">
+												</div>
+												<div class="form-group">
+													<label for="formGroupExampleInput">Bank Account Number</label>
+													<input type="text" class="form-control" id="formGroupExampleInput">
+												</div>
+												<div class="form-group">
+													<label for="method">How often do you want to pay?</label>
+													<select class="form-control" id="method">
+														<option>Monthly</option>
+														<option>Quarterly</option>
+														<option>Bi-anually</option>
+														<option>Anually</option>
+													</select>
+												</div>
+											</div>
+
+											<!-- end of withdraw part -->
+
+
+											<!-- card part -->
+											<div id="card-part">
+												<div class="form-group">
+													<label for="formGroupExampleInput">Card Number</label>
+													<input type="text" class="form-control" id="formGroupExampleInput">
+												</div>
+												<div class="form-group">
+													<label for="formGroupExampleInput">Expiration Date</label>
+													<input type="text" class="form-control" id="formGroupExampleInput">
+												</div>
+												<div class="form-group">
+													<label for="formGroupExampleInput">CVC Code</label>
+													<input type="text" class="form-control" id="formGroupExampleInput">
+												</div>
+												<div class="form-group">
+													<label for="method">How often do you want to pay?</label>
+													<select class="form-control" id="method">
+														<option>Monthly</option>
+														<option>Quarterly</option>
+														<option>Bi-anually</option>
+														<option>Anually</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<!-- end of card part -->
+									</div>
+
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-info" id="confirm-method">Confirm</button>
+									<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- end of payModal -->
+
+					<!-- confirmModal frequency -->
+					<div class="modal fade confirmModal" id="confirmModal-method" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content ">
+								<div class="container-fluid">
+									<p>Your payment method has been changed and we have emailed you a confirmation at</p>
+									<p>beatriz.nallar@example.com</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- end of confirmModal frequency       -->
+
+
+
+						<!-- end of modal -->
+					</div>
+					<script src="views/customer_service/js/customer.js" type="text/javascript"></script>
+				</body>
+				</html>

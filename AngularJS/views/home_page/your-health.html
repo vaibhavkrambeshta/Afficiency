@@ -1,0 +1,362 @@
+<link rel="stylesheet" type="text/css" href="/styles/page_about.css">
+
+<div class="header_quote_page">
+  <img style="margin-right:20px" src="/images/logo/logo.png">
+  <p class="u-title"><span>Hi,</span> Beatriz</p>
+</div>
+<div class='abt-cnt your-health'>
+  <div class='abt-inner'>
+<div class='abt-header'>
+<h3>You are applying for <b>${{selected_premium_amount/1000}}K</b> of life insurence coverage for <b>{{seleted_premium_span}}</b> years</h3>
+<div class="progress-indi">
+<div class="container" style="width:100%;">
+
+
+            <div class="row bs-wizard" style="border-bottom:0;">
+
+                <div class="col-xs-3 bs-wizard-step active">
+                   <div class="text-center bs-wizard-stepnum"></div>
+                  <div class="progress" style="background:#1EAF77"><div class="progress-bar"></div></div>
+                  <a href="#!/about_you" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">About You</div>
+                </div>
+
+                <div class="col-xs-3 bs-wizard-step active"><!-- complete -->
+                  <div class="text-center bs-wizard-stepnum"></div>
+                  <div class="progress" style="background:#1EAF77"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">Your Health</div>
+                </div>
+
+                <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
+                  <div class="text-center bs-wizard-stepnum"></div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">Your Beneficlaries</div>
+                </div>
+            </div>
+
+</div>
+</div>
+</div>
+<div class="form">
+  <form>
+    <label class="sub-header">Please respond to all health questions</label>
+
+    <div class="row" ng-repeat="(k,q) in p.questions">
+      <div class="col-md-12 question">
+        {{q.sequence}}. {{q.text}}
+      </div>
+
+      <div class="col-md-12 answer">
+        <input type="text" id={{k}} ng-if="p.sub_questions[k].type == 'open'">
+        <div ng-if="p.sub_questions[k].type == 'bool'">
+          <div class="col-md-3">
+            <label class="radio-inline">
+              <input type="radio" name="{{k}}" value="{{p.sub_questions[k].ans[0].id}}"> Yes
+            </label>
+          </div>
+          <div class="col-md-3">
+            <label class="radio-inline">
+              <input type="radio" name="{{k}}" value="{{p.sub_questions[k].ans[1].id}}"> No
+            </label>
+          </div>
+        </div>
+        <div ng-if="p.sub_questions[k].type == 'ternary'">
+          <div class="col-md-3">
+            <label class="radio-inline">
+              <input type="radio" name="{{k}}" value="{{p.sub_questions[k].ans[0].id}}"> {{p.sub_questions[k].ans[0].text}}
+            </label>
+          </div>
+          <div class="col-md-3">
+            <label class="radio-inline">
+              <input type="radio" name="{{k}}" value="{{p.sub_questions[k].ans[1].id}}"> {{p.sub_questions[k].ans[1].text}}
+            </label>
+          </div>
+          <div class="col-md-3">
+            <label class="radio-inline">
+              <input type="radio" name="{{k}}" value="{{p.sub_questions[k].ans[0].id}}"> {{p.sub_questions[k].ans[2].text}}
+            </label>
+          </div>
+        </div>
+        <div ng-if="p.sub_questions[k].type == 'multiple'">
+          <div class="row" ng-repeat="j in p.sub_questions[k].even_ans">
+            <div class="col-md-6">
+              <label class="radio-inline">
+                <input type="checkbox" name="{{k}}" value="{{j.id}}"> {{j.text}}
+              </label>
+            </div>
+            <div class="col-md-6" ngif="p.sub_questions[k].odd_ans[$index].text.length > 0">
+              <label class="radio-inline">
+                <input type="checkbox" name="{{k}}" value="{{j.id}}"> {{p.sub_questions[k].odd_ans[$index].text}}
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<!--
+<div class="form-group col-md-4">
+    <label for="exampleInputName2">1. How tall are you</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="exampleInputEmail2">2. How much do you weigh?</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+  <p>3. In the past 3 years , have you used any tobacco or nicotine products more then 4 times per yaer? </p>
+  <div class="radio-g">
+   <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes, Within the past yaer
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes, 1-3 yaers ago
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> No
+</label>
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+  <p>4. In the past 3 years , have you used any tobacco or nicotine products more then 4 times per yaer? </p>
+   <div class="radio-g">
+   <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+</label>
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+  <p>5. In the past 3 years , have you used any tobacco or nicotine products more then 4 times per yaer? </p>
+   <div class="radio-g">
+   <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+</label>
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+  <p>6. In the past 3 years , have you used any tobacco or nicotine products more then 4 times per yaer? </p>
+   <div class="radio-g">
+    <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+</label>
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+  <p>7. In the past 3 years , have you used any tobacco or nicotine products more then 4 times per yaer? </p>
+   <div class="radio-g">
+    <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+</label>
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+  <p>8. In the past 3 years , have you used any tobacco or nicotine products more then 4 times per yaer? </p>
+  <div class="radio-g">
+   <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+</label>
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+  <p>9. In the past 3 years , have you used any tobacco or nicotine products more then 4 times per yaer? </p>
+   <div class="radio-g">
+   <div class="col-md-4">
+    <div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+    Hiv
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    AIDS
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+    Alcohol or drug abuse
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+    Hiv
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    AIDS
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+    Alcohol or drug abuse
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+    Hiv
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    AIDS
+  </label>
+</div>
+
+   </div>
+   <div class="col-md-4">
+    <div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+    Hiv
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    AIDS
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+    Alcohol or drug abuse
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+    Hiv
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    AIDS
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+    Alcohol or drug abuse
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+    Hiv
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    AIDS
+  </label>
+</div>
+
+   </div>
+   <div class="col-md-4">
+    <div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+    Hiv
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    AIDS
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+    Alcohol or drug abuse
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+    Hiv
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    AIDS
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+    Alcohol or drug abuse
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+    Hiv
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    AIDS
+  </label>
+</div>
+
+   </div>
+</div>
+</div>
+</div>
+</form>
+</div>-->
+<div class="row button-grp" style="margin:auto !important">
+<div>
+    <input  type="submit"  value =" &#8592; Go Back" class="button1" ng-click="prev()">
+  </div>
+  <div class="right">
+    <input  type="submit"  value =" Your Beneficlaries &#8594;" class="button1" ng-click="next()">
+  </div>
+  </div>
+</div>
+</div>

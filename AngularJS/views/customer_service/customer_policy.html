@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../favicon.ico">
+	<title>Starter Template for Bootstrap</title>
+	<!-- Custom styles for this template -->
+	<script href="views/customer_service/js/jquery_v3_1_1.min.js"></script>
+	<script src="views/customer_service/js/bootstrap.min.js"></script>
+
+	<!--     <link rel="import" href="views/customer_service/Modal.html"> -->
+	<link href="views/customer_service/css/starter-template.css" rel="stylesheet">
+	<link href="views/customer_service/css/customer.css" rel="stylesheet">
+
+
+
+
+
+</head>
+
+
+<body class="skin-black">
+
+	<nav class="navbar navbar-inverse navbar-fixed-top top-nav">
+		<div class="container-fluid ">
+			<div class="navbar-header">
+				<img src="views/registration_forms/images/logo.png" class="img" />  
+			</div>
+			<div class="navbar-right ">
+				<ul class="nav navbar-nav">
+					<li class="dropdown user user-menu">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<i class="glyphicon glyphicon-user"></i>
+							<span>Jane Doe <i class="caret"></i></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li class="user-header bg-light-blue">
+								<img alt="User Image" class="img-circle" src="views/registration_forms/img/avatar3.png">
+								<p>
+									Jane Doe - Web Developer
+									<small>Member since Nov. 2012</small>
+								</p>
+							</li>
+							<li class="user-body">
+								<div class="col-xs-4 text-center">
+									<a href="#">Followers</a>
+								</div>
+								<div class="col-xs-4 text-center">
+									<a href="#">Sales</a>
+								</div>
+								<div class="col-xs-4 text-center">
+									<a href="#">Friends</a>
+								</div>
+							</li>
+							<!-- Menu Footer-->
+							<li class="user-footer">
+								<div class="pull-left">
+									<a class="btn btn-default btn-flat" href="#">Profile</a>
+								</div>
+								<div class="pull-right">
+									<a class="btn btn-default btn-flat" href="#">Sign out</a>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div> </div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<style>
+		.dropdown:hover .dropdown-menu {
+			display: block;
+			background-color: black;
+			color: white;
+			left: 200px;
+			top: 70px;
+		}
+		#drop-policy > li > a {
+			color: white;
+		}
+		.dropdown-menu{}
+	</style>
+
+	<div class="container-fluid">
+		<div class="starter-template st1-patop" id="nav_div" style="z-index:1;width:100%;height:140px;">
+			<div class="black-block">
+				<div class="container-fluid">
+					<ul class="cus-bar">
+						<li>
+							<a href="#!/customer_home" class="cus-index col-md-2">Home</a>
+						</li>
+						<li class="dropdown">
+							<a href="#!/customer_policy" class="cus-index col-md-2 dropdown-toggle">Policy <p>Details</p></a>
+							<ul class="dropdown-menu" id="drop-policy">
+								<li><a  href="#/customer_policy" ><p>Term Life STI-xxx-1234</p>
+									<p>$500 coverage</p>
+									<p>from 03/16/2015 to 03/15/2035</p></a></li>
+									<li role="separator" class="divider"></li>
+									<li><a  href="#/customer_policy" ><p>Term Life STI-xxx-1234</p>
+										<p>$500 coverage</p>
+										<p>from 03/16/2015 to 03/15/2035</p></a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#!/customer_bill" class="cus-index col-md-2">Payments & <p>Billing</p></a>
+								</li>
+								<li>
+									<a href="#!/customer_doc" class="cus-index col-md-2">Message & Documents</a>
+								</li>
+								<li>
+									<a href="#!/custom5" class="cus-index col-md-2">Get Further Insurance</a>
+								</li>
+								<li>
+									<a href="#!/custom6" class="cus-index col-md-2">Make a <p>Claim</p></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="content" style="margin:0 auto; display:block;">
+					<div class="container-fluid ">
+						<div class="sum-form2 panel panel-default" >
+							<div class="panel-heading">Policy Details for Policy ID STI-XXX-1234</div>
+							<div class="panel-body">
+								<div class="container-fluid">
+									<div class="row green-row">
+										<div class="col-md-3 bs-callout">
+											<h2>Coverage Amount</h2>
+											<h1>{{coverage}}</h1>
+										</div>
+										<div class="col-md-3 bs-callout">
+											<h2>Insured Person</h2>
+											<h1>Beatriz Nallar</h1>
+										</div>
+										<div class="col-md-2 bs-callout">
+											<h2>Gender</h2>
+											<h1>Female</h1>
+										</div>
+										<div class="col-md-4 bs-callout">
+											<h2>Policy Period</h2>
+											<h1>04/16/2000 - 04/15/2020</h1>
+										</div>
+									</div>
+
+									<hr class="sum-hr">
+
+									<!-- premium row -->
+									<div class="row">
+										<div class="col-md-5 bs-callout">
+											<h2>Premium  <img class="edit pre-edit" src="views/customer_service/img/edit.png"> </h2>  
+
+											<!-- start of popover -->
+											<div class="premium-pop pop">
+												<div class="col-md-2">
+													<img  src="views/customer_service/img/arr.png">
+												</div>
+												<div class="col-md-10">
+													<a onclick="$('#preModal').modal('show');"><p>Change your payment to quarterly, bi-annually or anually</p></a>
+												</div>
+												<div class="col-md-12">
+													<hr>
+												</div>
+												<div class="col-md-2">
+													<img  src="views/customer_service/img/arr.png">
+												</div>
+
+												<div class="col-md-10">
+													<a data-toggle="modal" data-target="#myModal"><p>Change the day of the month you pay</p></a>
+												</div>
+											</div>
+											<!-- end of popover -->
+
+
+											<h1>$33.00 paid monthly on the 5th day of every month</h1>
+										</div>
+										<div class="col-md-7 bs-callout">
+											<h2>Paid with<img class="pay-edit edit" src="views/customer_service/img/edit.png"></h2>
+
+											<!-- start of popover -->
+											<div class="pay-pop pop col-md-6">
+
+												<div class="col-md-2">
+
+													<img  src="views/customer_service/img/arr.png">
+												</div>
+
+												<div class="col-md-10">
+													<a onclick="$('#payModal').modal('show');"><p>Change payment method or payment account</p></a>
+												</div>
+											</div>
+
+											<h1>Aamerican Express account ending in 5467</h1>
+										</div>
+									</div>
+
+									<!-- premium row -->
+
+									<hr>
+									<div class="row orange-row">
+										<div class="col-md-5 bs-callout">
+											<h2>Policy Owner<img class="edit" id="owner-edit" src="views/customer_service/img/edit.png"></h2>
+											<h1>Beatriz Nallar</h1>
+										</div>
+										<div class="col-md-7 bs-callout">
+											<h2>Email<img class="edit" src="views/customer_service/img/edit.png"></h2>
+											<h1>Beatriz_sister@example.com</h1>
+										</div>
+									</div>
+									<div class="row orange-row">
+										<div class="col-md-5 bs-callout">
+											<h2>Address<img class="edit" src="views/customer_service/img/edit.png"></h2>
+											<h1>355 16th st</h1>
+											<h1>New York</h1>
+											<h1>NY 10003</h1>
+										</div>
+										<div class="col-md-7 bs-callout">
+											<h2>Phone Numbers(s)<img class="edit" src="views/customer_service/img/edit.png"></h2>
+											<h1>(123)456-1234(Mobile)</h1>
+											<h1>(315)123-2345(Work)</h1>
+											<h1>(719)234-2234(Home)</h1>
+										</div>
+									</div>
+
+									<hr class="sum-hr">
+									<div class="row purple-row">
+										<div class="col-md-3 bs-callout">
+											<h2>Beneficiaries<img class="edit" id="benefitEdit" src="views/customer_service/img/edit.png"></h2>
+											<h1>Shikha Sharma</h1>
+											<h1>Emily He</h1>
+										</div>
+										<div class="col-md-3 bs-callout">
+											<h2>Relationship</h2>
+											<h1>Friend</h1>
+											<h1>Sister</h1>
+										</div>
+										<div class="col-md-6 bs-callout">
+											<h2>Distribution of Proceeds</h2>
+											<h1>35%</h1>
+											<h1>65%</h1>
+										</div>
+									</div>
+
+									<hr class="sum-hr">
+									<div class="row">
+										<div class="col-md-6 bs-callout orange-row">
+											<h2>Policy Assigned as collateral</h2>
+											<h1>No</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="footer main-bg">
+						<div class="pull-right">
+							<ul class="main-so">
+								<li>
+									<img src="views/registration_forms/images/fb.png" />
+								</li>
+								<li>
+									<img src="views/registration_forms/images/tw.png" />
+								</li>
+								<li>
+									<img src="views/registration_forms/images/in.png" />
+								</li>
+								<li>
+									<img src="views/registration_forms/images/g.png" />
+								</li>
+							</ul>
+						</div>
+						<div>
+							<strong>Copyright</strong> Example Company &copy; 2014-2017
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!-- start of modal -->
+
+
+
+
+					<!-- Modal -->
+					<!-- premodal -->
+					<div class="modal fade" id="preModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content ">
+								<div class="container-fluid">
+									<h2 class="modal-h2">You currently pay Monthly on the 5th day of the month</h2>
+									<hr class="modal-hr">
+									<div class="modal-body">
+										<div class="form-group">
+											<h5 for="frequency">Change frequency to</h5>
+											<select class="form-control" id="frequency">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<h5 for="month">Day of the month</h5>
+											<select class="form-control" id="month">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+												<option>6</option>
+												<option>7</option>
+												<option>8</option>
+												<option>9</option>
+												<option>10</option>
+												<option>11</option>
+												<option>12</option>
+												<option>13</option>
+												<option>14</option>
+												<option>15</option>
+												<option>16</option>
+												<option>17</option>
+												<option>18</option>
+												<option>19</option>
+												<option>20</option>
+												<option>21</option>
+												<option>22</option>
+												<option>23</option>
+												<option>24</option>
+												<option>25</option>
+												<option>26</option>
+												<option>27</option>
+												<option>28</option>
+											</select>
+										</div>
+										<p>By changing to annual payments you will pay $420 every year.</p>
+										<p>Since your policy is paid up to 05/16/2016. you next payment will be for the lesser amount of $400</p>
+										<p>We are scheduling you next payment for 04/01/2016. Subsequent payments will be every year after that.</p>
+									</div> 
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-info" id="confirm-btn">Confirm</button>
+									<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- end of preModal -->
+
+
+
+					<!-- confirmModal frequency -->
+					<div class="modal fade confirmModal" id="confirmModal-frequency" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content ">
+								<div class="container-fluid">
+									<p>Your payment frequency has been changed and we have emailed you a confirmation at</p>
+									<p>beatriz.nallar@example.com</p>
+								</div>
+							</div>  
+						</div>
+					</div>
+
+					<!-- end of confirmModal frequency       -->
+
+
+
+					<!-- payModal -->
+					<div class="modal fade" id="payModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content ">
+								<div class="container-fluid">
+									<h2 class="modal-h2">You currently pay Monthly on the 5th day of the month</h2>
+									<hr class="modal-hr">
+									<div class="modal-body">
+										<h2>Please provide your new billing information</h2>
+										<div class="col-md-8 col-md-offset-2 pay-content"> 
+											<div class="form-group">
+												<label for="method">Method of payment</label>
+												<select class="form-control" id="method">
+													<option>Bank Account Withdrawal</option>
+													<option>Credit/Debit</option>
+												</select>
+											</div>
+
+											<!-- withdraw part -->
+											<div id="withdraw-part">
+												<div class="form-group">
+													<label for="method">Bank Account Type</label>
+													<select class="form-control" id="method">
+														<option>Checking's Account</option>
+														<option>Saving's Account</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<label for="formGroupExampleInput">Bank Routing Number</label>
+													<input type="text" class="form-control" id="formGroupExampleInput">
+												</div>
+												<div class="form-group">
+													<label for="formGroupExampleInput">Bank Account Number</label>
+													<input type="text" class="form-control" id="formGroupExampleInput">
+												</div>
+												<div class="form-group">
+													<label for="method">How often do you want to pay?</label>
+													<select class="form-control" id="method">
+														<option>Monthly</option>
+														<option>Quarterly</option>
+														<option>Bi-anually</option>
+														<option>Anually</option>
+													</select>
+												</div>
+											</div>
+
+											<!-- end of withdraw part -->
+
+
+											<!-- card part -->
+											<div id="card-part">
+												<div class="form-group">
+													<label for="formGroupExampleInput">Card Number</label>
+													<input type="text" class="form-control" id="formGroupExampleInput">
+												</div>
+												<div class="form-group">
+													<label for="formGroupExampleInput">Expiration Date</label>
+													<input type="text" class="form-control" id="formGroupExampleInput">
+												</div>
+												<div class="form-group">
+													<label for="formGroupExampleInput">CVC Code</label>
+													<input type="text" class="form-control" id="formGroupExampleInput">
+												</div>
+												<div class="form-group">
+													<label for="method">How often do you want to pay?</label>
+													<select class="form-control" id="method">
+														<option>Monthly</option>
+														<option>Quarterly</option>
+														<option>Bi-anually</option>
+														<option>Anually</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<!-- end of card part -->
+									</div>
+
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-info" id="confirm-method">Confirm</button>
+									<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- end of payModal -->
+
+					<!-- confirmModal frequency -->
+					<div class="modal fade confirmModal" id="confirmModal-method" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content ">
+								<div class="container-fluid">
+									<p>Your payment method has been changed and we have emailed you a confirmation at</p>
+									<p>beatriz.nallar@example.com</p>
+								</div>
+							</div>  
+						</div>
+					</div>
+
+					<!-- end of confirmModal frequency       -->
+
+					<!-- owner modal -->
+					<div class="modal fade" id="ownerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content ">
+								<div class="container-fluid">
+									<h2 class="modal-h2">The current owner of policy STI-xxx-1234 is Beatrize Nallar</h2>
+									<hr class="modal-hr">
+									<div class="modal-body">
+
+										<p>If you change ownership of this policy you are transferring ownership of this policy to another individual, company or trust. In doing so you give up your ownership rights which include the right to change ownership or choose or change beneficiaries. Once ownership is transferred the new owner will be responsible for all policy premium payments.</p>
+										<p>To complete a transfer of ownership an email will be sent to the new owner who must consent to taking ownership and provide details to verify their identity. Upon completion of this step you will receive notice of the policy transfer. Do you want to proceed?</p>
+
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-info" id="owner-yes">Yes</button>
+										<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">No</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- end of owner modal -->
+
+					<!-- owner detail -->
+					<div class="modal fade" id="owner-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content ">
+								<div class="modal-body">
+									<div class="sum-form2 panel panel-default" >
+										<div class="panel-body">
+											<div class="container-fluid">
+												<h1>The current owner of policy STI-xxx-1234 is Beatrize Nallar</h2>
+													<hr class="modal-hr">
+													<h3>Please provide the new owner's information.</h3>
+													<div class="row">
+														<div class="col-md-5">
+															<div class="form-group">
+																<label for="method">Owner Type</label>
+																<select class="form-control" id="method">
+																	<option>Individual</option>
+																	<option>Company</option>
+																	<option>Trust</option>
+																</select>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-3">
+															<div class="form-group">
+																<label for="formGroupExampleInput">First Name</label>
+																<input type="text" class="form-control" id="formGroupExampleInput">
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="form-group">
+																<label for="formGroupExampleInput">Middle Name</label>
+																<input type="text" class="form-control" id="formGroupExampleInput">
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="form-group">
+																<label for="formGroupExampleInput">Last Name</label>
+																<input type="text" class="form-control" id="formGroupExampleInput">
+															</div>
+														</div>
+													</div>
+													<hr class="modal-hr">
+													<div class="row">
+														<div class="col-md-7">
+															<div class="form-group">
+																<label for="formGroupExampleInput">Street Address</label>
+																<input type="text" class="form-control" id="formGroupExampleInput">
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-3">
+															<div class="form-group">
+																<label for="formGroupExampleInput">City</label>
+																<input type="text" class="form-control" id="formGroupExampleInput">
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="form-group">
+																<label for="formGroupExampleInput">State</label>
+																<input type="text" class="form-control" id="formGroupExampleInput">
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="form-group">
+																<label for="formGroupExampleInput">ZIP Code</label>
+																<input type="text" class="form-control" id="formGroupExampleInput">
+															</div>
+														</div>
+													</div>
+													<hr class="modal-hr">
+													<div class="row">
+														<div class="col-md-4">
+															<div class="form-group">
+																<label for="formGroupExampleInput">Date of Birth</label>
+																<input class="form-control" type="date" id="example-date-input">
+															</div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-group">
+																<label for="formGroupExampleInput">Social Security Number</label>
+																<input type="text" class="form-control" id="formGroupExampleInput">
+															</div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-group">
+																<label for="formGroupExampleInput">Email</label>
+																<input type="text" class="form-control" id="formGroupExampleInput">
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-md-3">
+															<div class="form-group">
+																<label for="formGroupExampleInput">Phone Number</label>
+																<input type="text" class="form-control" id="formGroupExampleInput">
+															</div>
+														</div>
+														<div class="radioPart">
+															<div class="col-md-2">
+																<label class="custom-control custom-radio">
+																	<input id="radio1" name="radio" type="radio" class="custom-control-input">
+																	<span class="custom-control-indicator"></span>
+																	<span class="custom-control-description">Mobile</span>
+																</label>
+															</div>
+															<div class="col-md-2">
+																<label class="custom-control custom-radio">
+																	<input id="radio1" name="radio" type="radio" class="custom-control-input">
+																	<span class="custom-control-indicator"></span>
+																	<span class="custom-control-description">Home</span>
+																</label>
+															</div>
+															<div class="col-md-2">
+																<label class="custom-control custom-radio">
+																	<input id="radio1" name="radio" type="radio" class="custom-control-input">
+																	<span class="custom-control-indicator"></span>
+																	<span class="custom-control-description">Work</span>
+																</label>
+															</div>
+															<div class="col-md-3">
+																<button class="addBtn">+ Add phone</button>
+															</div>
+														</div>
+													</div>
+
+													<hr class="modal-hr">
+													<h2>Signature and Date</h2>
+													<p>I hereby transfer absolutely to the "New Owner" all incidents of ownership and control, and all right, little and interest in and to the policy(policy number STI-xxx-12345)</p>
+													<div class="row sign-row">
+														<label for="example-text-input" class="col-md-1 col-form-label">Name</label>
+														<div class="col-md-3">
+															<input class="form-control" type="text" id="example-text-input">
+														</div>
+														<label for="example-text-input" class="col-md-1 col-form-label">Date</label>
+														<div class="col-md-3">
+															<input class="form-control" type="text" id="example-text-input">
+														</div>
+													</div>
+
+												</div>
+												<hr>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-info" id="ownerSubmit">Submit</button>
+											<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- end of owner detail -->
+
+					<!-- confirmModal-owner -->
+					<div class="modal fade confirmModal" id="confirmModal-owner" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content ">
+								<div class="container-fluid">
+									<p>The policy transfer request has been sent to the new owner. Once they have completed the authorization, the policy transfer will be complete.</p>		
+								</div>
+							</div>  
+						</div>
+					</div>
+					<!-- end of confirmModal-owner -->
+
+					<!-- benefitModal -->
+					<div class="modal fade" id="benefitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content ">
+								<div class="container-fluid">
+									<h2 class="modal-h2">Your Beneficiaries</h2>
+									<hr class="modal-hr">
+									<div class="modal-body">
+									<table class="table table-sm">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Relationship</th>
+													<th>Date of Birth</th>
+													<th>Distribution</th>
+													<th></th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Mark</td>
+													<td>Sister</td>
+													<td>05/07/1988</td>
+													<th>65%</th>
+													<th><img class="edit" src="views/customer_service/img/edit.png"></th>
+													<th><img class="edit" src="views/customer_service/img/delete.png"></th>													
+												</tr>
+											</tbody>
+									 </table>
+                                    <div class="">
+										<button class="addBtn">+ Add another</button>
+									</div>
+
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="formGroupExampleInput">First Name</label>
+												<input class="form-control" type="form-control" id="example-date-input">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="formGroupExampleInput">Middle Name</label>
+												<input type="text" class="form-control" id="formGroupExampleInput">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="formGroupExampleInput">Last Name</label>
+												<input type="text" class="form-control" id="formGroupExampleInput">
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="formGroupExampleInput">Relationship</label>
+												<input class="form-control" type="date" id="example-date-input">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="formGroupExampleInput">Date of Birth</label>
+												<input type="text" class="form-control" id="formGroupExampleInput">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="formGroupExampleInput">Distribution of Proceeds</label>
+												<input type="text" class="form-control" id="formGroupExampleInput">
+											</div>
+										</div>
+									</div>									
+
+									</div> 
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-info" id="confirmBenefit">Confirm</button>
+									<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end of benefitModal -->
+										<!-- confirmModal-owner -->
+					<div class="modal fade confirmModal" id="confirmModal-benefit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content ">
+								<div class="container-fluid">
+									<p>Your changes have been implemented and a confirmation email has been sent to Beatriz.nallar@example.com.</p>		
+								</div>
+							</div>  
+						</div>
+					</div>
+					<!-- end of confirmModal-owner -->
+					<!-- end of modal -->
+
+
+					<script src="views/customer_service/js/customer.js" type="text/javascript"></script>
+				</body>
+				</html>

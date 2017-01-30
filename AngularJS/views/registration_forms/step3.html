@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <link href="views/registration_forms/starter-template.css" rel="stylesheet">
+    <!-- <script src="views/registration_forms/jquery_v3_1_1.min.js"></script> -->
+
+
+</head>
+
+<body class="skin-black">
+
+<nav class="navbar navbar-inverse navbar-fixed-top top-nav">
+    <div class="container-fluid" style="padding-left: 40px; padding-right: 40px;">
+        <div class="navbar-header">
+            <img src="views/registration_forms/images/logo.png" class="img" />
+        </div>
+
+        <div class="navbar-right ">
+            <ul class="nav navbar-nav">
+
+                <li class="dropdown user user-menu">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <span>Jane Doe <i class="caret"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- User image -->
+                        <li class="user-header bg-light-blue">
+                            <img alt="User Image" class="img-circle" src="views/registration_forms/img/avatar3.png">
+                            <p>
+                                Jane Doe - Web Developer
+                                <small>Member since Nov. 2012</small>
+                            </p>
+                        </li>
+                        <!-- Menu Body -->
+                        <li class="user-body">
+                            <div class="col-xs-4 text-center">
+                                <a href="#">Followers</a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="#">Sales</a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="#">Friends</a>
+                            </div>
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a class="btn btn-default btn-flat" href="#">Profile</a>
+                            </div>
+                            <div class="pull-right">
+                                <a class="btn btn-default btn-flat" href="#">Sign out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div> </div>
+
+    </div>
+</nav>
+
+
+<div class="container-fluid" style="padding-left: 40px;padding-right: 40px;">
+    <div class="starter-template st1-patop" id="nav_div" style="z-index:1;width:1269px;">
+        <div class="container-fluid">
+            <div class="st1-top">  You are applying for $500,000 of life insurance coverage for 30 years </div>
+
+        </div>
+        <div class="center-block center-m gry-area">
+            <ul class="progress-indicator">
+                <li class="completed">
+                    <span class="bubble fa-circle-o">  </span>
+                    <a href="#/buy_now" class="steps">Personal Information</a>
+                </li>
+                <li class="completed">
+                    <span class="bubble fa-circle-o"></span>
+                    <a href="#/step2" class="steps">Policy Details</a>
+                </li>
+                <li class="completed">
+                    <span class="bubble fa-circle-o"></span>
+                    <a href="#/step3" class="steps">Your Beneficiaries</a>
+
+                </li>
+                <li>
+
+                    <span class="bubble"></span>
+                    <a href="#/step4" class="steps">About You</a>
+                </li>
+                <li>
+                    <span class="bubble"></span>
+                    <a href="#/step5" class="steps">Your Health</a>
+                </li>
+
+                <li>
+                    <span class="bubble"></span>
+                    <a href="#/step6" class="steps">Confirm</a>
+                </li>
+            </ul>
+            <div class="pull-right top0lg" id="legal_gerenal_logo" style="margin-top:-100px;"> <img src="views/registration_forms/images/lg.png"/> </div>
+        </div>
+    </div>
+
+
+    <!-- st -->
+    <div class="box panel-eh">
+        <div class="row pad-30" style="padding-bottom:50px;">
+            <div class="col-xs-10 col-md-offset-1">
+                <div class="box panel-eh">
+                    <div class="box box-default">
+                        <div class="box-header with-border">
+                            <h3 class="box-title top-td"> <img src="views/registration_forms/images/arr.png" class="img3">Who do you want to leave the proceeds to?</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#proceedsToDiv" aria-expanded="true"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="row margin-left">
+                                <div id="proceedsToDiv" aria-expanded="true" class="collapse in">
+                                    <div class="row main_lab">
+                                        <div class="col-md-9">
+                                            <label style="color:#e77e23;font-family: 'Roboto', sans-serif;" class="lableo">
+                                                <i>
+                                                    <span class="label label-warning">i</span> Please provide as much information as you can.This can help us find beneficiary faster.
+                                                    Don't worry- you can always change or add beneficiary later.
+                                                </i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row main_lab">
+                                        <div class="col-md-12">
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="row main_lab" style="margin-left: 30px;">
+                                        <div class="col-md-9" style="box-shadow: 0 0 20px #ccc;border-radius: 4px;padding: 0 0 15px 0;">
+                                            <div class="row" style="margin: 0;">
+                                            <div class="form-group" style="background-color:#00A4E3;text-align:center;border-radius: 4px 4px 0 0;height:40px; position: relative;top: -5px;">
+                                                <label class="lableo" style="color:white;padding-top:5px;font-weight:300;font-size:20px;font-family: 'Roboto Slab', serif;">Beneficiary 1</label>
+                                            </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="lableo">Prefix</label>
+                                                        <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched" ng-model="beneficiary_prefix" id="beneficiary_prefix" placeholder="" maxlength="10">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="lableo">SSN</label>
+                                                        <input type="number" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" ng-model="beneficiary_ssn" id="beneficiary_ssn" placeholder="###-##-####" maxlength="11">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="lableo">Relationship to you</label>
+                                                        <select class=" form-control my-colorpicker1 " style="width: 100%;">
+                                                            <option selected="selected" value="Select">Select</option>
+                                                            <option value="Domestic Partner">Domestic Partner</option>
+                                                            <option value="Spouse">Spouse</option>
+                                                            <option value="Sibling">Sibling</option>
+                                                            <option value="Parent">Parent</option>
+                                                            <option value="Child">Child</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="lableo">First Name</label>
+                                                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" ng-model="firstName" id="firstName" placeholder="" maxlength="50">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="lableo">Middle Name</label>
+                                                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" ng-model="middleName" id="middleName" placeholder="" maxlength="50">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="lableo">Last Name</label>
+                                                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" ng-model="lastName" id="lastName" placeholder="" maxlength="50">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+                                        <div class="col-md-3"></div>
+                                    </div>
+                                    <div class="row main_lab">
+                                        <div class="col-md-3">
+                                            <div class="form-group" style="margin-top: 20px;">
+                                                <div style="border:1px solid #00a4e4; border-radius:20px;height:40px;text-align:center;padding-top:10px;color:#00a4e4;cursor:pointer;font-size:15px;">
+                                                    + Add beneficiary
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row main_lab">
+                                        <div class="col-md-12">
+                                            <hr>
+                                        </div>
+                                    </div>
+
+                                    <div class="row main_lab" style="margin-left: 30px;">
+                                        <div class="col-md-9" style="box-shadow: 0 0 20px #ccc;border-radius: 4px;padding: 0 0 15px 0;">
+                                            <div class="row" style="margin: 0;">
+                                                <div class="form-group" style="background-color:#00C097;text-align:center;height:40px;font-size:15px;border-radius: 4px 4px 0 0;position: relative;top: -5px;">
+                                                    <label class="lableo" style="color:white;padding-top:5px;font-weight:300;font-size:20px;font-family: 'Roboto Slab', serif;">Contingent Beneficiary 1</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="lableo">Prefix</label>
+                                                        <input type="text" class="form-control" id="contbeneficiary_Prefix" placeholder="" maxlength="10">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="lableo">SSN</label>
+                                                        <input type="number" class="form-control" id="cont_bene_SSN" placeholder="###-##-####">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="lableo">Relationship to you</label>
+                                                        <select class=" form-control my-colorpicker1 " style="width: 100%;">
+                                                            <option selected="selected" value="Select">Select</option>
+                                                            <option value="Domestic Partner">Domestic Partner</option>
+                                                            <option value="Spouse">Spouse</option>
+                                                            <option value="Sibling">Sibling</option>
+                                                            <option value="Parent">Parent</option>
+                                                            <option value="Child">Child</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="lableo">First Name</label>
+                                                        <input type="text" class="form-control" id="cont_bene_firstName" placeholder="" maxlength="50">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="lableo">Middle Name</label>
+                                                        <input type="text" class="form-control" id="cont_bene_middleName" placeholder="" maxlength="50">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="lableo">Last Name</label>
+                                                        <input type="text" class="form-control" id="cont_bene_lastName" placeholder="" maxlength="50">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+                                        <div class="col-md-3"></div>
+                                    </div>
+
+                                    <div class="row main_lab">
+                                        <div class="col-md-3">
+                                            <div class="form-group" style="margin-top: 20px;">
+                                                <div style="border:1px solid #1bbc9b; border-radius:50px;text-align:center;padding: 8px 0;color:#1bbc9b;cursor:pointer;font-size:17px;font-family: 'Roboto', sans-serif;font-weight: 400;">
+                                                    + Add Contigent beneficiary
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- st -->
+    <div class="box panel-eh">
+        <div class="row pad-30">
+        </div>
+    </div>
+</div>
+</div>
+<div class="center-m margin-bt20" style="margin-top: -18px;
+    margin-bottom: 18px;">
+
+    <input type="button" ng-click="move_to_yourdetails()" value="About You →" class="button-m">
+</div>
+
+<div class="clearfix"></div>
+
+<!-- button end -->
+</div>
+
+
+<!-- st end -->
+</div><!-- /.container -->
+</div>
+
+<div class="footer main-bg">
+    <div class="pull-right">
+        <ul class="main-so">
+            <li>
+                <img src="views/registration_forms/images/fb.png" />
+            </li>
+            <li>
+                <img src="views/registration_forms/images/tw.png" />
+            </li>
+            <li>
+                <img src="views/registration_forms/images/in.png" />
+            </li>
+
+            <li>
+                <img src="views/registration_forms/images/g.png" />
+            </li>
+        </ul>
+    </div>
+    <div>
+        <strong>Copyright</strong> Example Company &copy; 2014-2017
+    </div>
+
+    <div class="clearfix"> </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(window).bind('scroll', function () {
+            var navHeight = $(window).height() - 460;
+            if ($(window).scrollTop() > navHeight) {
+                $('#nav_div').addClass('fixed');
+                $('#nav_div').css('margin-top', "-20px");
+                //$('#legal_gerenal_logo').css('margin-top',"-80px");
+            }
+            else {
+                $('#nav_div').removeClass('fixed');
+                $('#nav_div').css('margin-top', "0px");
+                //$('#legal_gerenal_logo').css('margin-top',"-80px");
+            }
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

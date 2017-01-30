@@ -1,0 +1,78 @@
+<link rel="stylesheet" type="text/css" href="/styles/page_paragraph.css">
+
+<div class="header_quote_page">
+  <img style="margin-right:20px" src="/images/logo/logo.png">
+</div>
+<div class="my_form">
+   <div class="design_center_block">
+          <img style="margin-left:40px;width:54px;height:50px"  src="/images/getQuoteIcon.png">
+          <label class="header1"> Get an instant quote </label>
+    </div>
+    <div class="paragraph">
+      <div style="display:flex;flex-direction:row; align-items:flex-end;"><label>I am a</label>
+       <select ng-model="gender" style="width:120px">
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+      </select>
+      <label style="float:left;">born on</label>
+      <!-- <input type="date" ng-model="dob"/> -->
+      <datepicker class="paragraph_dob"
+        button-prev='<i class="fa fa-arrow-circle-left"></i>'
+        button-next='<i class="fa fa-arrow-circle-right"></i>'
+        date-format='MM-dd-yyyy'>
+        <input ng-model="dob" type="text" class="font-fontawesome font-light radius3" placeholder="Choose a date"/>
+      </datepicker>
+
+      .
+      <label>I currently live in the </label><input type="text" ng-model="state" placeholder="10003"  style="width:150px"/><label>zip.</label></div>
+
+      <div style="display:flex;flex-direction:row; align-items:flex-end;">
+        <label>I am</label><select ng-model="feet" class="selectpicker" style="width:120px">
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+      </select><label>feet and</label><select ng-model="inches" style="width:120px">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+      </select>
+      <label>inches tall, and I weigh</label> <input type="text"  ng-model="weight" placeholder="Weight" /> <label>pounds.</label>
+      </div>
+      <div style="display:flex;flex-direction:row; align-items:flex-end;">
+        <label>My email address is</label> <input type="text"  ng-model="email" placeholder="Email" style="width:35%;"/> <label>and</label>
+      <label>I am a</label>
+      <select ng-model="smoker">
+          <option value="S">Smoker</option>
+          <option value="NS">Non-Smoker</option>
+      </select>.
+    </div>
+    <div>
+      <label>My overall health is</label>
+      <div ng-model="health_rating" class="rating" style="direction: rtl;">
+        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="footer" id="footer">
+  <div class="footer" id="footer" style="display:flex;flex-direction:row; justify-content:center; margin-top:-20px;">
+    <input ng-click="get_quote('fname', 'lname',gender,dob,feet,inches,weight,smoker,'years')"  type="submit"  value =" CHECK OUT YOUR QUOTE &#8594; " class="button1"
+    style="margin-top:-25px;">
+  </div>
+</div>

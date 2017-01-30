@@ -1,0 +1,108 @@
+<div class="admin_page">
+  <main-nav></main-nav>
+  <div class="admin_body">
+    <uib-tabset active="activeJustified" justified="true">
+      <uib-tab index="0" heading="ML Config">
+        <form class="form">
+          <div class="form-group">
+            <label>Step name</label>
+            <select ng-model="selected_step_name">
+              <option ng-repeat="option in experience_steps" ng-value="option.exp_step_id">{{option.step_name}}</option>
+            </select>
+          </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+                <label>Start date</label>
+                <input class="form-control" type="date" ng-model="start_date"/>
+            </div>
+            <div class="col-md-6 form-group">
+                <label>End date</label>
+                <input class="form-control" type="date" ng-model="end_date"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="pwd">ML Percentage</label>
+              <input type="number" class="form-control" ng-model="ml_percen">
+            </div>
+            <div class="col-md-6 form-group">
+              <button type="submit" class="btn btn-default" ng-click="add_ml(selected_step_name, start_date, end_date, ml_percen)">Add Config</button>
+            </div>
+          </div>
+        </form>
+        <div style="padding-top:30px;">
+          <table class="table">
+            <thead>
+            <tr>
+              <th> Step Name </th>
+              <th> Effective Start Date </th>
+              <th> Effective End Date </th>
+              <th> ML Percentage </th>
+            </tr>
+            <tr ng-repeat="i in ml_data">
+              <td>
+                {{i.step_name}}
+              </td>
+              <td>
+                {{i.effective_from_date | date:'shortDate'}}
+              </td>
+              <td>
+                {{i.effective_end_date | date:'shortDate'}}
+              </td>
+              <td>
+                {{i.ml_limit}}%
+              </td>
+            </tr>
+          </thead>
+          </table>
+        </div>
+      </uib-tab>
+
+      <uib-tab index="1" heading="AB Design Config">
+        <form class="form">
+          <div class="form-group">
+            <label>Step name</label>
+            <select ng-model="selected_step_name_ab_design" ng-change="loadDesign(selected_step_name_ab_design)">
+              <option ng-repeat="option in experience_steps" ng-value="option.exp_step_id">{{option.step_name}}</option>
+            </select>
+          </div>
+
+          <div class="row" ng-repeat="i in design_data">
+            <div class="col-md-6 form-group">
+              <label for="pwd">{{i.design_name}}</label>
+              <input ng-disabled="true" class="form-control" ng-model="i.design_desc">
+            </div>
+            <div class="col-md-6 form-group">
+              <label for="pwd">Percentage</label>
+              <input type="number" class="form-control" ng-model="design_data[$index].percentage">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-default" ng-click="add_ab_design()">Save</button>
+        </form>
+        <div style="padding-top:30px;">
+          <table class="table">
+            <thead>
+            <tr>
+              <th> Step Name </th>
+              <th> Design Name </th>
+              <th> ML Percentage </th>
+            </tr>
+            <tr ng-repeat="i in ab_design_data">
+              <td>
+                {{i.exp_step_name}}
+              </td>
+              <td>
+                {{i.design_name}}
+              </td>
+              <td>
+                {{i.percentage}}%
+              </td>
+            </tr>
+          </thead>
+          </table>
+        </div>
+      </uib-tab>
+    </uib-tabset>
+  </div>
+</div>

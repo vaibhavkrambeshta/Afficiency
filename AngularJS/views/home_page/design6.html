@@ -1,0 +1,79 @@
+<link rel="stylesheet" type="text/css" href="/styles/page_forms.css">
+
+<div class="header_quote_page">
+  <img style="margin-right:20px" src="/images/logo/logo.png">
+</div>
+<div class="my_form">
+    <div class="design_center_block">
+          <img style="margin-left:40px;width:54px;height:50px"  src="/images/getQuoteIcon.png">
+          <label class="header1"> Get an instant quote </label>
+          <!-- <img style="margin-right:20px" src="/images/affi.png"> -->
+    </div>
+    <div class="cnt-4">
+    <div class="row">
+      <div class="form-group col-md-6 left_col">
+        <label for="name" class="lbl">Date Of Birth</label>
+        <!-- <input type="date" ng-model="dob"> --> <br/>
+        <datepicker class="paragraph_dob"style="width:200px;"
+          button-prev='<i class="fa fa-arrow-circle-left"></i>'
+          button-next='<i class="fa fa-arrow-circle-right"></i>'
+          date-format='MM-dd-yyyy'>
+          <input ng-model="dob" type="text" class="font-fontawesome font-light radius3" placeholder="Choose a date"/>
+        </datepicker>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="name" class="lbl">Gender</label>
+        <select ng-model="gender">
+           <option value="M">Male</option>
+           <option value="F">Female</option>
+       </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6 left_col">
+        <label for="name" class="lbl">Height</label>
+        <input type="text" ng-model="height" placeholder="feet,inches">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="name" class="lbl">Weight</label>
+        <input type="text" ng-model="weight" placeholder="in pounds">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6 left_col">
+        <label for="name" class="lbl">ZIP Code</label>
+        <input type="text" ng-model="zipCode" placeholder="10003">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="name" class="lbl">Email Address</label>
+        <input type="text" ng-model="email" placeholder="Email">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6 left_col">
+        <label for="name" class="lbl row" style="padding-left:20px;">What is your overall health?</label>
+        <div class="row">
+          <div ng-model="health_rating" colspan="3" class="rating" style="padding-left:15px;">
+
+        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+</div>
+        </div>
+      </div>
+      <div class="form-group col-md-6" style="padding-bottom:50px;">
+        <label for="name" class="lbl">Do You Smoke?</label>
+        <select ng-model="smoker">
+           <option value="S">Smoker</option>
+           <option value="NS">Non-Smoker</option>
+       </select>
+      </div>
+    </div>
+
+  </div>
+    <input ng-click="get_quote('fname', 'lname',gender,dob,height,weight,smoker,'years')"  type="submit"  value =" CHECK OUT YOUR QUOTE &#8594; " class="button1" style="margin-left:500px;">
+  </div>
+</div>
+<div class="footer"></div>

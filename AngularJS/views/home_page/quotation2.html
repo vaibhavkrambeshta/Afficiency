@@ -1,0 +1,336 @@
+<style type="text/css">
+
+
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #2497E3;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497E3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #A1D0FF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #2497E3;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #2497E3;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497E3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #A1D0FF;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2497E3;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: #2497E3;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497E3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #A1D0FF;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #2497E3;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #2497E3;
+}
+
+
+
+.main_body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+.center_card{
+  width: 90%;
+  height: 450px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header{
+  position: relative;
+  font-size: 25px;
+  font-weight: 100;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+.slider_class{
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 40px;
+  font-size: 14px;
+}
+.slider_center{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-left: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #354959;
+}
+.slider_right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0px;
+  font-size: 14px;
+  font-weight: 200;
+  color: #2497e3;
+}
+.price_labels{
+  font-size: 14px;
+  font-weight: 200;
+  color: #2497e3;
+}
+.card{
+  cursor: pointer;
+}
+.card_row{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+.card_title{
+  background-color:#354959;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  height: 40px;
+}
+.card_body_1{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  height: 100px;
+  background: #816FC1; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#816FC1, #2C9AD8); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#816FC1, #2C9AD8); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#816FC1, #2C9AD8); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#816FC1, #2C9AD8); /* Standard syntax */
+}
+
+.card_body_2{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  height: 100px;
+  background: #816FC1; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#C97C71, #E23491); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#C97C71, #E23491); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#C97C71, #E23491); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#C97C71, #E23491); /* Standard syntax */
+}
+
+.card_body_3{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  height: 100px;
+  background: #816FC1; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#329da6, #8FD8AA); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#329da6, #8FD8AA); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#329da6, #8FD8AA); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#329da6, #8FD8AA); /* Standard syntax */
+}
+
+.card_body_4{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  height: 100px;
+  background: #816FC1; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#09BC84, #95DA93); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#09BC84, #95DA93); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#09BC84, #95DA93); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#09BC84, #95DA93); /* Standard syntax */
+}
+
+.back_button{
+  border: 1px solid #2497e3;
+    border-radius: 30px;
+    background: none;
+    color: #2497e3;
+    font-size: 15px;
+    font-weight: 100;
+    height: 25px;
+    width: 150px;
+    position: absolute;
+    left: 0;
+}
+.next_button{
+  border: 1px solid #00CC7B;
+  border-radius: 30px;
+  background-color: #00CC7B;
+  color: white;
+  font-size: 15px;
+  font-weight: 100;
+  height: 40px;
+  width: 150px;
+}
+textarea:focus, input:focus, button:focus{
+  outline: none;
+}
+
+</style>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="header_quote_page">
+      <img style="margin-right:20px" src="/images/logo/logo.png">
+    </div>
+  </div>
+</nav>
+<div class="main_body">
+  <div class="row center_card">
+    <div class="header">
+      <button class="back_button" ng-click="go_back()">&#8592; Back</button> Choose your coverage and see your quote
+    </div>
+    <div class="row slider_class">
+
+      <div class="col-md-9" style="margin-left: 10%;">
+        <input type="range" min="1" max="10" step=".5" ng-model="selected_coverage_amount" ng-change="selected_coverage_amount_change()"/>
+      </div>
+    </div>
+    <div class="row" style="width:100%;">
+
+      <div class="col-md-9" style="margin-left: 10%;">
+        <div class="col-md-4 price_labels">$100K</div>
+        <div class="col-md-4 slider_center">${{coverage_amount/1000}}K</div>
+        <div class="col-md-4 slider_right">$1M</div>
+      </div>
+    </div>
+    <div class="row card_row">
+
+      <div class="card" style="width:250px;" ng-click="next(10)">
+        <div class="card_title">
+          <div style="font-weight:100;font-size:15px;color:white;">10 years coverage</div>
+        </div>
+        <div class="card_body_1">
+          <span style="font-size:30px;font-weight:100;color:white;">{{premium_10_years}}</span>
+          <span style="color:white;font-size:15px; font-weight:100; padding-left:5px;">per month</span>
+        </div>
+      </div>
+
+      <div class="card" style="width:250px;" ng-click="next(15)">
+        <div class="card_title">
+          <div style="font-weight:100;font-size:15px;color:white;">15 years coverage
+
+          </div>
+        </div>
+        <div class="card_body_2">
+          <span style="font-size:30px;font-weight:100;color:white;">{{premium_15_years}}</span>
+          <span style="color:white;font-size:15px; font-weight:100; padding-left:5px;">per month</span>
+        </div>
+      </div>
+
+      <div class="card" style="width:250px;" ng-click="next(20)">
+        <div class="card_title">
+          <div style="font-weight:100;font-size:15px;color:white;">20 years coverage</div>
+        </div>
+        <div class="card_body_3">
+          <span style="font-size:30px;font-weight:100;color:white;">{{premium_20_years}}</span>
+          <span style="color:white;font-size:15px; font-weight:100; padding-left:5px;">per month</span>
+        </div>
+      </div>
+
+      <div class="card" style="width:250px;" ng-click="next(30)">
+        <div class="card_title">
+          <div style="font-weight:100;font-size:15px;color:white;">30 years coverage</div>
+        </div>
+        <div class="card_body_4">
+          <span style="font-size:30px;font-weight:100;color:white;">{{premium_30_years}}</span>
+          <span style="color:white;font-size:15px; font-weight:100; padding-left:5px;">per month</span>
+        </div>
+      </div>
+    </div>
+    <p style="font-size: 1.2em;
+    margin-top: 40px;">Now choose the term length of your policy by clicking on one of the boxes above.</p>
+  </div>
+  <!--<div class="row" style="margin-top:-18px;width:80%">
+    <div class="col-md-6" style="padding-left:20px;">
+      <button class="back_button" ng-click="go_back()">Back</button>
+    </div>
+    <div class="col-md-6">
+      <button class="next_button pull-right" ng-click="buy_now()">Apply</button>
+    </div>
+  </div>
+</div>
+-->

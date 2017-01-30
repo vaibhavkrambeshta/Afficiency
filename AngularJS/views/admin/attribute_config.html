@@ -1,0 +1,85 @@
+<div class="admin_page">
+  <main-nav></main-nav>
+  <div class="admin_body">
+    <uib-tabset active="activeJustified" justified="true">
+      <uib-tab index="0" heading="Attribute Config" class="tab_body">
+        <div class="row">
+          <br>
+        </div>
+        <div class="row">
+          <div class="col-md-8 form-group">
+              <label>Design Name</label>
+              <select ng-change="enableAttributes(designId)" ng-model="designId">
+                <option ng-repeat="design in designs" ng-value="design.design_id">{{design.design_name}}</option>
+              </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 form-group">
+              <label>Attribute Name</label>
+              <select ng-change="showLabelfields(attributeId)" ng-model="attributeId" ng-disabled="attrDisabled">
+                <option ng-repeat="attribute in attributes" ng-value="attribute.id">{{attribute.name}}</option>
+              </select>
+          </div>
+        </div>
+
+        <div ng-show="showAttrLbls" class="row" style="padding-top:30px;overflow-x:scroll;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Label Name</th>
+                <th>Label Percentage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="i in attribute_labels">
+                <td>{{i.display}}</td>
+                <td><input type="number" ng-model="i.percentageValue" class="form-control"/></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div ng-show="showAttrLbls" class="row">
+          <div class="col-md-12 form-group" style="text-align: end;
+            padding-right: 0px;
+            padding-top: 20px;">
+            <button class="btn btn-success" ng-click="add_attribute_label(designId, attributeId, attribute_labels)"> Add Label </button>
+            <!-- <button class="btn btn-success" ng-click="quote_calculation()">Get Quote</button> -->
+          </div>
+        </div>
+
+        <div class="row" style="padding-top:30px;overflow-x:scroll;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Attribute Name</th>
+                <th>Design Name</th>
+                <th>Label Name</th>
+                <th>Label Percentage</th>
+                <th>Effective From</th>
+                <th>Effective End</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="i in attribute_design_label_details">
+                <td>{{i.attribute_name}}</td>
+                <td>{{i.design_name}}</td>
+                <td>{{i.label_name}}</td>
+                <td>{{i.ab_design_label_limit}}%</td>
+                <td>{{i.effective_from_date}}</td>
+                <td>{{i.effective_end_date}}</td>
+                <td>
+                    <a style="cursor:pointer;">Remove</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </uib-tab>
+    </uib-tabset>
+  </div>
+</div>

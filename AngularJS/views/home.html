@@ -1,0 +1,51 @@
+<h2 class="text-center">ALASTOR Boilerplate</h2>
+
+<!-- slider directive -->
+<div class="row pull-right" ng-hide="data.logged_in">
+  Welcome {{email}}    <button class="btn btn-danger" ng-click="signout()">Signout</button>
+</div>
+<div myslider>
+    <ul class="slider">
+        <li class="image-slider">
+            <img src="../images/app_images/1.jpg" alt="Image">
+        </li>
+        <li class="image-slider">
+            <img src="../images/app_images/2.jpg" alt="Image">
+        </li>
+        <li class="image-slider">
+            <img src="../images/app_images/1.jpg" alt="Image">
+        </li>
+        <li class="image-slider">
+            <img src="../images/app_images/2.jpg" alt="Image">
+        </li>
+        <li class="image-slider">
+            <img src="../images/app_images/1.jpg" alt="Image">
+        </li>
+        <li class="image-slider">
+            <img src="../images/app_images/2.jpg" alt="Image">
+        </li>
+    </ul>
+</div>
+
+<div class="playground">
+  <Button class="btn btn-success" ng-click="goto_home()">Get Quote</Button>
+  <br>
+  <br>
+  <div ng-hide="show_stats">
+    <ul>
+      <li> My Cookie - {{cookie}} </li>
+      <li> My FingerPrint - {{fingerprint}} </li>
+      <li> My Visits Count - {{last_visited}} </li>
+    </ul>
+  </div>
+</div>
+
+<h3>Features</h3>
+<div class="container cf">
+    <div>
+        <ul>
+            <li>* Feature 1</li>
+            <li>* Feature 2</li>
+        </ul>
+    </div>
+</div>

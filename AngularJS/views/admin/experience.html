@@ -1,0 +1,87 @@
+
+<div class="admin_page">
+  <main-nav></main-nav>
+  <div class="admin_body">
+    <uib-tabset active="activeJustified" justified="true">
+      <uib-tab index="0" heading="Customer Experience">
+        <form class="form">
+          <div class="form-group">
+            <label for="exp_name">Experience Name</label>
+            <input type="text" class="form-control" ng-model="exp_name">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Experience Applicability</label>
+            <input type="text" class="form-control" id="exp_app" ng-model="exp_app">
+          </div>
+          <button type="submit" class="btn btn-default" ng-click="add_exp(exp_name, exp_app)"><i class="fa fa-plus"></i> Add Experience</button>
+        </form>
+        <div style="padding-top:30px;">
+          <table class="table table-condensed table-striped">
+            <thead>
+            <tr>
+              <th> Experience Name </th>
+              <th> Experience Applicability </th>
+              <th>Actions</th>
+            </tr>
+            <tr ng-repeat="i in items">
+              <td>
+                {{i.name}}
+              </td>
+              <td>
+                {{i.applicability}}
+              </td>
+              <td>
+                <i class="fa fa-trash" style="color: rgba(255, 7, 7, 0.6);cursor:pointer;"></i> Remove
+              </td>
+            </tr>
+          </thead>
+          </table>
+        </div>
+      </uib-tab>
+
+      <uib-tab index="1" heading="Experience Step">
+        <form class="form">
+          <div class="form-group">
+            <label for="exp">Select Experience</label>
+            <select ng-model="exp_name">
+              <option ng-repeat="option in items" ng-value="option.id">{{option.name}}</option>
+            </select>
+          </div>
+
+
+
+          <div class="form-group">
+            <label for="name">Step Name</label>
+            <input type="text" class="form-control" id="step_name" ng-model="step_name">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="3" placeholder="Description" required ng-model="desc"></textarea>
+          </div>
+          <button type="submit" class="btn btn-default" ng-click="add_step(exp_name, step_name, desc)">Add Experience</button>
+        </form>
+        <div style="padding-top:30px;">
+          <table class="table">
+            <thead>
+            <tr>
+              <th> Experience Name </th>
+              <th> Step Name </th>
+              <th> Description </th>
+            </tr>
+            <tr ng-repeat="i in steps">
+              <td>
+                {{i.experience_name}}
+              </td>
+              <td>
+                {{i.step_name}}
+              </td>
+              <td>
+                <a>{{i.description}}</a>
+              </td>
+            </tr>
+          </thead>
+          </table>
+        </div>
+      </uib-tab>
+    </uib-tabset>
+  </div>
+</div>

@@ -1,0 +1,109 @@
+<style>
+  th{
+    width: inherit !important;
+  }
+</style>
+
+<div class="admin_page">
+  <main-nav></main-nav>
+
+  <div class="admin_body">
+    <uib-tabset active="activeJustified" justified="true">
+      <uib-tab index="0" heading="Questions" class="tab_body">
+        <div class="row">
+          <br>
+        </div>
+        <div class="row">
+          <div class="col-md-6 form-group">
+              <label>Question Sequence</label>
+              <input class="form-control" type="number" ng-model="v.sequence"/>
+              <label>Question Type</label>
+              <select ng-model="type">
+                <option ng-value="UEM" selected="selected">UEM</option>
+                <option ng-value="BINARY">BINARY</option>
+              </select>
+          </div>
+          <div class="col-md-6 form-group">
+              <label>Question</label>
+              <textarea class="form-control" type="question_text" ng-model="v.question"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 form-group">
+              <label>Parent Question</label>
+              <select ng-model="v.parent_id">
+                <option ng-repeat="p in v.q" ng-value="p.id">{{p.text}}</option>
+              </select>
+
+              <label>Applicable Parent Answer</label>
+              <select ng-model="v.parent_answer">
+                <option ng-repeat="a in v.s_q[v.parent_id]" ng-value="a.id">{{a.text}}</option>
+              </select>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <label>Possible Values</label>
+            <textarea class="form-control" type="text" ng-model="v.values"/>
+          </div>
+        </div>
+        <div class="row pull-right">
+          <button class="btn btn-success" ng-click="add()">Add Question</button>
+        </div>
+        <div class="row" style="padding-top:30px;overflow-x:scroll;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Question Sequence</th>
+                <th>Question</th>
+                <th>Answer Type</th>
+                <th>Possible Values</th>
+                <th>Parent Question</th>
+                <th>Applicable Parent Answer</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="(k,i) in v.q">
+                <td>{{i.id}}</td>
+                <td>{{i.sequence}}</td>
+                <td>{{i.text}}</td>
+                <td>{{i.answer_type}}</td>
+                <td>{{i.possible_values}}</td>
+                <td>{{i.parent_id}}</td>
+                <td>{{i.parent_answer}}</td>
+                <td>
+                    <a style="cursor:pointer;" ng-click="delete_design(i.id)">Remove</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </uib-tab>
+      <uib-tab index="1" heading="Sub Question" class="tab_body">
+        <div class="row">
+          <br>
+        </div>
+          <h2>Questions</h2>
+          <div class="row" ng-repeat="(k,i) in v.q">
+            <div class="row">
+              <div class="col-md-10">
+                {{$index+1  }}. {{i.text}}
+              </div>
+              <div class="col-md-2">
+                <button class="btn btn-default" ng-click="open(k)"><i class="fa fa-plus">Answer</i></button>
+              </div>
+            </div>
+            <div class="row" style="padding-left:50px;padding-bottom:10px;" ng-if="v.show_id == k">
+              <div class="col-md-4">Answer   <input type="text" ng-model="answer"/></div>
+              <div class="col-md-4">Type   <input type="text" ng-model="type"/></div>
+              <div class="col-md-4" style="padding-top:25px;"><button ng-click="save(k, answer, type)" class="btn btn-success">Add Answer</button></div>
+            </div>
+            <div class="row" ng-repeat="x in v.s_q[k]" style="padding-left:50px;padding-bottom:10px;">
+              <span>{{x.text}}</span>
+            </div>
+          </div>
+      </uib-tab>
+    </uib-tabset>
+  </div>
+</div>

@@ -1,0 +1,289 @@
+<link rel="stylesheet" type="text/css" href="/styles/page_about.css">
+
+<div class="header_quote_page">
+  <img style="margin-right:20px" src="/images/logo/logo.png">
+  <p class="u-title"><span>Hi,</span> Beatriz</p>
+</div>
+<div class='abt-cnt'>
+  <div class='abt-inner'>
+<div class='abt-header'>
+<h3>You are applying for <b>${{selected_premium_amount/1000}}K</b> of life insurence coverage for <b>{{seleted_premium_span}}</b> years</h3>
+<div class="progress-indi">
+<div class="container" style="width:100%;">
+            <div class="row bs-wizard" style="border-bottom:0;">
+                <div class="col-xs-3 bs-wizard-step active">
+                   <div class="text-center bs-wizard-stepnum"></div>
+                  <div class="progress" style="background:#1EAF77"><div class="progress-bar"></div></div>
+                  <a href="#!/about_you" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">About You</div>
+                </div>
+                <div class="col-xs-3 bs-wizard-step active">
+                   <div class="text-center bs-wizard-stepnum"></div>
+                  <div class="progress" style="background:#1EAF77"><div class="progress-bar"></div></div>
+                  <a href="#!/your_health" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">Your Health</div>
+                </div>
+                <div class="col-xs-3 bs-wizard-step active">
+                   <div class="text-center bs-wizard-stepnum"></div>
+                  <div class="progress" style="background:#1EAF77"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">Your Beneficiary</div>
+                </div>
+            </div>
+</div>
+</div>
+</div>
+<div class="form">
+<form>
+<label class="sub-header">Who do you want to leave the proceeds to?</label>
+<div class="row">
+  <div class="col-md-12 app_info">
+    <i class="fa fa-info-circle"></i>   Please provide as much information as you can. This can
+    help us find your beneficiary faster.<br>
+    Don't worry - you can always change or add beneficiaries later.
+  </div>
+</div>
+
+<div class="row bottom-border" style="padding-bottom:20px;">
+
+  <div class="beneficiary_box" ng-repeat="b in p.beneficiaries">
+    <div class="row beneficiary_header">
+      Beneficiary
+    </div>
+    <div class="row beneficiary_content">
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">First Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" readonly ng-model="b.firstname">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Middle Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" readonly ng-model="b.middlename">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Last Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" readonly ng-model="b.lastname">
+      </div>
+    </div>
+    <div class="row beneficiary_content">
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Date Of Birth</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" readonly ng-model="b.dob">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Relation</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" readonly ng-model="b.relation">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="beneficiary_box">
+    <div class="row beneficiary_header">
+      Beneficiary
+    </div>
+
+    <div class="row beneficiary_content">
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">First Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="p.firstname">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Middle Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="p.middlename">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Last Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="p.lastname">
+      </div>
+    </div>
+
+
+    <div class="row beneficiary_content">
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Date Of Birth</label>
+        <datepicker
+          button-prev='<i class="fa fa-arrow-circle-left"></i>'
+          button-next='<i class="fa fa-arrow-circle-right"></i>'
+          date-format='MM-dd-yyyy'>
+          <input ng-model="p.dob" type="text" class="font-fontawesome font-light radius3" placeholder="Choose a date"/>
+        </datepicker>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Relationship to you</label>
+        <input type="tex" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="p.relation">
+      </div>
+    </div>
+
+
+
+  </div>
+  <div class="row" style="padding-left: 15px;padding-bottom:20px;">
+    <button class="add_b btn btn-default" ng-click="add_ben(0)"> + Add Beneficiary </button>
+  </div>
+</div>
+<div class="row" style="padding-bottom:20px;">
+
+
+  <div class="beneficiary_box" ng-repeat="b in p.con_beneficiaries">
+    <div class="row c_beneficiary_header">
+      Contingent Beneficiary
+    </div>
+
+    <div class="row beneficiary_content">
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">First Name</label>
+        <input type="text" class="form-control" readonly ng-model="b.firstname">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Middle Name</label>
+        <input type="text" class="form-control" readonly ng-model="b.middlename">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Last Name</label>
+        <input type="text" class="form-control" readonly ng-model="b.lastname">
+      </div>
+    </div>
+
+
+    <div class="row beneficiary_content">
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Date Of Birth</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" readonly ng-model="b.dob">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Relation</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" readonly ng-model="b.relation">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="beneficiary_box">
+    <div class="row c_beneficiary_header">
+      Contingent Beneficiary
+    </div>
+
+    <div class="row beneficiary_content">
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">First Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="p.c_firstname">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Middle Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="p.c_middlename">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Last Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="p.c_lastname">
+      </div>
+    </div>
+
+    <div class="row beneficiary_content">
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Date Of Birth</label>
+        <datepicker
+          button-prev='<i class="fa fa-arrow-circle-left"></i>'
+          button-next='<i class="fa fa-arrow-circle-right"></i>'
+          date-format='MM-dd-yyyy'>
+          <input ng-model="p.c_dob" type="text" class="font-fontawesome font-light radius3" placeholder="Choose a date"/>
+        </datepicker>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail2">Relationship to you</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="p.c_relation">
+      </div>
+    </div>
+  </div>
+  <div class="row" style="padding-left: 15px;padding-bottom:20px;">
+    <button class="add_b btn btn-default" ng-click="add_ben(1)"> + Add Contingent Beneficiary </button>
+  </div>
+</div>
+
+
+<label class="sub-header">
+  How do you want the proceeds to be distributed?
+</label>
+<div class="row">
+  <div class="col-md-12 app_info" style="border-bottom:0px !important">
+    <i class="fa fa-info-circle"></i>   Please provide all amounts in the same unit
+    (either all in dollars or all in percentage)
+  </div>
+</div>
+<div class="row" style="font-size:14px;padding-bottom:30px;">
+  <div class="col-md-5" style="
+  box-shadow: 5px 5px 5px #CCCCCC;
+  margin-right: 0px !important;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-right: 20px;
+  ">
+    <div class="row beneficiary_header">
+      Among Beneficiaries
+    </div>
+    <div class="row beneficiary_content">
+      <div class="row row_content color1">
+        <div class="col-md-6">
+            Beneficiary
+        </div>
+        <div class="col-md-6">
+            Distribution
+        </div>
+      </div>
+      <div class="row row_content" style="padding-bottom:5px;" ng-repeat="b in p.beneficiaries">
+        <div class="col-md-6">
+            {{b.firstname}} {{b.lastname}}
+        </div>
+        <div class="col-md-6 c_row">
+            <input type="text" class="c_text" ng-model="p1[$index]"/> %
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-5" style="
+  box-shadow: 5px 5px 5px #CCCCCC;
+  margin-right: 0px !important;
+  padding-left: 0px;
+  padding-right: 0px;
+  ">
+    <div class="row beneficiary_header bgcolor2">
+      Among Contingent Beneficiaries
+    </div>
+    <div class="row beneficiary_content">
+      <div class="row row_content color1">
+        <div class="col-md-6">
+            Beneficiary
+        </div>
+        <div class="col-md-6">
+            Distribution
+        </div>
+      </div>
+
+      <div class="row row_content" style="padding-bottom:5px;" ng-repeat="b in p.con_beneficiaries">
+        <div class="col-md-6">
+            {{b.firstname}} {{b.lastname}}
+        </div>
+        <div class="col-md-6 c_row">
+            <input type="text" class="c_text" ng-model="p2[$index]"/> %
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+</form>
+</div>
+<div class="row button-grp">
+<div>
+    <input  type="submit"  value =" &#8592; Your Health" class="button1" ng-click="prev()">
+  </div>
+  <div class="right">
+    <input  type="submit"  value =" Confirm &#8594;" class="button1" ng-click="next()">
+  </div>
+  </div>
+</div>
+</div>

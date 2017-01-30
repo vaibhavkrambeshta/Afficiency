@@ -1,0 +1,155 @@
+<link rel="stylesheet" type="text/css" href="/styles/page_paragraph.css">
+<style>
+  body{
+    overflow-y: scroll !important;
+  }
+</style>
+<div class="header_quote_page">
+  <img style="margin-right:20px" src="/images/logo/logo.png">
+</div>
+<div class="my_form">
+  <form id="design1Frm">
+    <div class="design_center_block">
+          <img style="margin-left:40px;width:54px;height:50px"  src="/images/getQuoteIcon.png">
+          <label class="header1"> Get an instant quote </label>
+    </div>
+    <div class="row" style="display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-height: 700px;
+    padding-bottom: 50px;">
+    <div class="paragraph" >
+     <div> <label>My name is</label> <input type="text" ng-model="fname" placeholder="First name" name="fname" ng-class="{red: design1Frm.fname.$invalid}" required/>
+      <input type="text" ng-model="lname" placeholder="Last name" /> .
+      <label>I am a</label>
+       <select ng-model="gender" style="width:200px;" placeholder="Gender">
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+      </select>
+    </div>
+    <div>
+      <label style="float:left;">born on </label>
+      <datepicker class="paragraph_dob"
+        button-prev='<i class="fa fa-arrow-circle-left"></i>'
+        button-next='<i class="fa fa-arrow-circle-right"></i>'
+        date-format='MM-dd-yyyy'>
+        <input ng-model="dob" type="text" class="font-fontawesome font-light radius3" placeholder="Choose a date"/>
+      </datepicker>
+      <!-- <input type="date" style="width:150px;" ng-model="dob" /> <label> . </label> -->
+
+
+
+
+          <label>I am</label>
+          <select ng-model="feet" style="width:150px;">
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+             <option value="6">6</option>
+             <option value="7">7</option>
+         </select> <label>feet and</label>
+         <select ng-model="inches">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+        </select>
+        <label>inches tall,</label>
+        </div>
+          <div><label>and I weigh</label> <input type="text" ng-model="weight" placeholder="Weight" style="width:100px;"/> <label>pounds.</label>
+        <label>I am a</label>
+       <select ng-model="smoker" style="width:120px;">
+           <option value="S">Smoker</option>
+           <option value="NS">Non-Smoker</option>
+       </select><label> and I live in  the state of</label>
+       <select ng-model="state" style="width:140px;">
+          <option value="Alabama">Alabama</option>
+          <option value="Alaska">Alaska</option>
+          <option value="Arizona">Arizona</option>
+          <option value="Arkansas">Arkansas</option>
+          <option value="California">California</option>
+          <option value="Colorado">Colorado</option>
+          <option value="Connecticut">Connecticut</option>
+          <option value="Delaware">Delaware</option>
+          <option value="Florida">Florida</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Hawaii">Hawaii</option>
+          <option value="Idaho">Idaho</option>
+          <option value="IllinoisIndiana">Illinois Indiana</option>
+          <option value="Iowa">Iowa</option>
+          <option value="Kansas">Kansas</option>
+          <option value="Kentucky">Kentucky</option>
+          <option value="Louisiana">Louisiana</option>
+          <option value="Maine">Maine</option>
+          <option value="Maryland">Maryland</option>
+          <option value="Massachusetts">Massachusetts</option>
+          <option value="Michigan">Michigan</option>
+          <option value="Minnesota">Minnesota</option>
+          <option value="Mississippi">Mississippi</option>
+          <option value="Missouri">Missouri</option>
+          <option value="MontanaNebraska">Montana Nebraska</option>
+          <option value="Nevada">Nevada</option>
+          <option value="NewHampshire">New Hampshire</option>
+          <option value="NewJersey">New Jersey</option>
+          <option value="NewMexico">New Mexico</option>
+          <option value="NewYork">New York</option>
+          <option value="NorthCarolina">North Carolina</option>
+          <option value="NorthDakota">North Dakota</option>
+          <option value="Ohio">Ohio</option>
+          <option value="Oklahoma">Oklahoma</option>
+          <option value="Oregon">Oregon</option>
+          <option value="PennsylvaniaRhodeIsland">Pennsylvania Rhode Island</option>
+          <option value="SouthCarolina">South Carolina</option>
+          <option value="SouthDakota">South Dakota</option>
+          <option value="Tennessee">Tennessee</option>
+          <option value="Texas">Texas</option>
+          <option value="Utah">Utah</option>
+          <option value="Vermont">Vermont</option>
+          <option value="Virginia">Virginia</option>
+          <option value="Washington">Washington</option>
+          <option value="WestVirginia">West Virginia</option>
+          <option value="Wisconsin">Wisconsin</option>
+          <option value="Wyoming">Wyoming</option>
+      </select>.
+      </div>
+        <div>
+          <label>My phone number is</label>
+
+      <input type="text" name=prim3 size=4 ng-model="phnNo3" placeholder="(xxx)-xxx-xxxx" style="width:150px;">
+
+      <label>and my email address is</label> <input type="text" ng-model="email" placeholder="Email" style="width:275px;"/>. <label>
+    </div>
+    <div><label>My overall
+      health is</label>
+      <div ng-model="health_rating" class="rating" style="direction: rtl;">
+        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+      </div>
+        <label>and I am looking for a policy that lasts</label> <select ng-model="years" style="width:150px;">
+             <option value="10">10</option>
+             <option value="15">15</option>
+             <option value="20">20</option>
+             <option value="30">30</option>
+         </select><!--  <input type="text" ng-model="years" placeholder="Years" /> --> <label>years.
+      </label>
+    </div>
+    </div>
+  </div>
+  </form>
+  <div class="footer" id="footer">
+    <div style="display:flex;flex-direction:row; justify-content:center; margin-top:-20px;">
+    <input ng-click="get_quote(fname, lname,gender,dob,feet,inch,weight,smoker,years)"  type="button"  value =" CHECK OUT YOUR QUOTE &#8594; " class="button1">
+    </div>
+  </div>
+</div>

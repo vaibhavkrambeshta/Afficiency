@@ -1,0 +1,250 @@
+<style>
+  button:focus{
+    outline: none;
+  }
+  .header_input{
+    height: 20px;
+    weight:20px;
+  }
+  .inp{
+    float: left !important;
+    width: 150px !important;
+    height: 30px !important;
+  }
+  .header_color{
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 16px;
+  }
+  .login_label{
+    float: left;
+    padding-right: 10px;
+    padding-top: 5px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    padding-left: 8px;
+    font-size: 12px;
+  }
+  .login_button{
+    color: rgba(255, 255, 255, 0.86) !important;
+    font-size: 16px;
+    font-weight: 500;
+    height: 30px;
+    padding-right: 20px;
+    background: transparent;
+    margin-left: 10px;
+    margin-top: -5px;
+    padding-bottom: 25px;
+  }
+  .line_divider{
+    width: 1px;
+    border-right: 1px solid white;
+    height: 33px;
+    background: none;
+    border-radius: 0px;
+  }
+  .btn-default:hover{
+    background-color: white;
+    color: grey !important;
+  }
+  .img{
+    width:90px;
+    height:90px;
+  }
+</style>
+<script>
+  $(document).ready(function(){
+    $(window).scroll(function(){
+        if($(window).scrollTop() > $(window).height()){
+            $(".menu").css({"background-color":"#8badb4"});
+            $(".img").css({"width":"50px","height":"50px"})
+        }
+        else{
+            $(".menu").css({"background-color":"transparent"});
+            $(".img").css({"width":"90px","height":"90px"})
+
+        }
+    })
+  })
+</script>
+<nav class="navbar navbar-fixed-top top-nav header_quote_page menu" style="background-color:transparent">
+    <div class="container-fluid ">
+        <div class="navbar-header">
+            <img src="images/web_images/logo.png" class="img" width="130%"/>
+        </div>
+        <div class="pull-right">
+          <!--<span class="header_color login_label">Username : </span><input type="text" class="inp"/>
+          <span class="header_color login_label">Password : </span> <input type="password" class="inp">-->
+
+          <span style="font-size:17px;font-weight:300;color:white;" ng-show="auth">Welcome <b>{{username}}</b></span>
+          <button class="btn btn-default login_button" ng-click="logout()" ng-show="auth">Logout  <i class="fa fa-sign-out"></i></button>
+          <button class="btn btn-default login_button" ng-click="open()" ng-hide="auth"><i class="fa fa-sign-in"></i>   Login </button>
+          <button class="btn line_divider"></button>
+          <button class="btn btn-link login_button" ng-click="signup()" ng-hide="auth"> <i class="fa fa-user-plus"></i>    Sign Up </button>
+          <a href="#!/about_you" class="btn btn-link login_button" style="margin-right:20px;"> <i class="fa fa-bookmark-o"></i>    Make Claim </a>
+        </div>
+    </div>
+</nav>
+
+
+
+      <div class="row banner" ng-class="banner_image">
+        <div class="row second_header">
+          {{Main_slogan}}
+        </div>
+        <div class="row third_header" class="height: 200px;
+    padding-top: 170px;
+    text-align: center;">
+          <button class="btn quote_button" ng-click="next()"> Get your free quote </button>
+        </div>
+      </div>
+      <div class="row about-product">
+        <div class="col-md-4" style="display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          height: 100%;">
+            <img src="images/web_images/afficiency-icon.png"/>
+        </div>
+        <div class="col-md-8" style="display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          height: 100%;
+          flex-direction: column;
+          padding-left: 100px;
+          padding-right:50px;">
+          <div style="    font-size: 40px;
+            font-weight: 100;
+            color: #ff4756;">
+              Afficiency </div>
+          <br>
+          <div>
+            <p style="text-align: justify;
+            font-size: 17px;
+            font-weight: 100;">
+              We believe that life insurance should be simple to understand,
+              affordable, and most of all easy to purchase.  At Afficiency,
+              we eliminate the commissioned agent and let consumers purchase
+              insurance directly and digitally in about 15 minutes online
+              versus the traditional process that can take two months.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row what-we-do">
+        <div class="col-md-8" style="display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          height: 100%;
+          flex-direction: column;
+          padding-left: 100px;
+          padding-right:50px;">
+          <div style="font-size: 40px;
+            font-weight: 100;
+            color: white;">
+              What We Do </div>
+          <br>
+          <div>
+            <p style="text-align: justify;
+            font-size: 17px;
+            font-weight: 100;">
+            We dramatically reduce the cost to acquire and maintain a life
+            insurance customer.  We do this by cutting out the middleman and
+            using technology such as machine learning to find customers and
+            match them to our product as well as completely digitizing
+            underwriting and customer service.</p>
+            <p style="text-align: justify;
+            font-size: 17px;
+            font-weight: 100;">
+            With these savings, we can streamline the traditional underwriting
+            process and keep prices affordable to the consumer. </p>
+          </div>
+        </div>
+        <div class="col-md-4" style="display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;">
+            <img src="images/web_images/what-we-do-icon.png"/>
+        </div>
+      </div>
+      <div class="row how-we-do" style="display: flex; align-items:center">
+        <div class="col-md-12" style="flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;">
+          <div class="row" style="font-size: 40px;
+            font-weight: 100;
+            ">
+            How We Do It
+          </div>
+          <br>
+          <div class="row" style="text-align: justify;
+          font-size: 17px;
+          font-weight: 100;">
+            We have created a white label product for life insurance carriers.
+          </div>
+          <div class="row" style="text-align: justify;
+          font-size: 17px;
+          font-weight: 100;">
+            The product will drive new growth and allow the consumer to purchase
+            life insurance on their terms
+          </div>
+          <div class="row" style="display:flex;
+          justify-content: center;
+          padding-top: 40px;">
+            <div class="col-md-3 info_box pink">
+              <div class="info_heading"> Product Design </div>
+
+              <div class="info_content">
+                Our regulatory and compliance expertise guides insurance carriers
+                through the filing process, accelerating the product launch
+              </div>
+            </div>
+            <div class="col-md-3 info_box navy_blue">
+              <div class="info_heading"> Marketing sales & Servicing </div>
+              <div class="info_content">
+                Our proprietary platform and key partnerships can market, sell & service
+                this product from very same day the product is successfully filed. There
+                are no significant set-up costs or investments. Beyond that, our customers
+                will pay a variable service fee.
+              </div>
+            </div>
+            <div class="col-md-3 info_box green">
+              <div class="info_heading"> Actuary Expertise </div>
+              <div class="info_content">
+                This product can priced and under-pricing rules adjusted to match risk
+                tolerance level of our customers.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row who-we-are">
+        <div class="col-md-4" style="display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          height: 100%;">
+            <img src="images/web_images/who-we-are-icon.png" style="height:70%"/>
+        </div>
+        <div class="col-md-8" style="display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          height: 100%;
+          flex-direction: column;
+          padding-left: 100px;
+          padding-right:50px;">
+          <div style="    font-size: 40px;
+            font-weight: 100;
+            color: #678aa0;">
+              Afficiency </div>
+          <br>
+          <div>
+            <p style="text-align: justify;
+            font-size: 17px;
+            font-weight: 100;">
+                In the past many have tried to disrupt life insurance space without
+              success. our team has learned the lessons from those missteps. We
+              together the requisite knowledge from the life insurance industry and combine that with
+              expertise in technology, big data and cutting edge digital marketing.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row footer">
+    </div>

@@ -1,0 +1,161 @@
+<link rel="stylesheet" type="text/css" href="/styles/page_about.css">
+
+<div class="header_quote_page">
+  <img style="margin-right:20px" src="/images/logo/logo.png">
+  <p class="u-title"><span>Hi,</span> Beatriz</p>
+</div>
+<div class='abt'>
+  <div class="abt1">
+    <div class="row s_msg">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-2" style="
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      ">
+        <img src="images/success.png">
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          Congratulations!
+        </div>
+        <div class="row">
+          Your policy has been approved!
+        </div>
+      </div>
+    </div>
+    <div class="row" style="padding-top:25px;font-size:15px;padding-left:0px;padding-right:0px;">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-8 review_box" style="padding-left:0px; padding-right:0px;">
+        <div class="col-md-6 msg_box">
+          <div class="box1">
+            <div class="box1_header">
+              Review Your Application
+            </div>
+            <div class="box1_content">
+              <div style="padding-top:15px;">
+                <div class="col-md-9">
+                  <div class="row small_title">
+                    Full Name
+                  </div>
+                  <div class="row big_title">
+                    <!-- Walter White -->
+                    {{firstName}} &nbsp; {{lastName}}
+                  </div>
+                </div>
+                <div class="col-md-3" style="padding-top:15px;">
+
+                </div>
+              </div>
+              <div style="padding-top:15px;">
+                <div class="col-md-9" style="padding-top:15px;">
+                  <div class="row small_title">
+                    Term Length
+                  </div>
+                  <div class="row big_title">
+                    <!-- 20 Years -->
+                    {{premium_span}} Years
+                  </div>
+                </div>
+                <div class="col-md-3" style="padding-top:15px;">
+
+                </div>
+              </div>
+              <div style="padding-top:15px;">
+                <div class="col-md-9" style="padding-top:15px;">
+                  <div class="row small_title">
+                    Coverage Amount
+                  </div>
+                  <div class="row big_title">
+                    <!-- $750,000 -->
+                    ${{total_premium_amount}}
+                  </div>
+                </div>
+                <div class="col-md-3" style="padding-top:15px;">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 box2">
+          <div class="row">
+            Monthly Premium
+          </div>
+          <div class="row" style="font-size:38px !important;">
+            <!-- $55.00 -->
+            {{monthlyPremiumAmount}}
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row" style="padding-bottom:50px;">
+      <div class="col-md-11" style="
+      padding-left: 55px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.77);
+      font-weight: 300;
+      ">
+      <p>
+        Please review your complete application to make sure all details are accurate.<br>
+        By signing below, you acknowledge that you read and understood our legal disclosures and agree to the following as well:
+      </p>
+      <br>
+      <p>
+        To the best of my knowledge and belief, all statements in this application for life insurance are true and complete.<br>
+        My statements in this application and any amendment(s) are the basis of any policy issued.
+      </p>
+      <br>
+      <p>
+        I understand that no insurance will take effect until my application for insurance has been approved and the full first premium due is paid. Insurance will only take effect upon payment of the full first premium due if the condition of my health is the same as stated in the application.
+      </p>
+      <br>
+      <p>
+        If any of the statements or information provided in this application are false or incomplete, the Policy may be rescinded. Any amounts paid will be returned without interest, and no benefits will be paid to any Beneficiary
+      </p>
+      <br>
+      <p>
+        [In addition, for residents of the State(s) listed below, please note the following:]
+      </p>
+      <br>
+      <p>
+        [Alabama, Arkansas, District of Columbia, New Mexico, Ohio, and Rhode Island Any person who knowingly presents a false or fraudulent claim for payment of a loss or benefit or knowingly presents false information in an application for insurance is guilty of a crime and may be subject to fines and confinement in prison.]
+      </p>
+      <p>
+        [Colorado It is unlawful to knowingly provide false, incomplete or misleading facts or information to an insurance company for the purpose of defrauding or attempting to defraud the company. Penalties may include imprisonment, fines, denial of life insurance and civil damages. Any insurance company or agent of an insurance company who knowingly provides false, incomplete, or misleading facts or information to a policy holder or claimant for the purpose of defrauding or attempting to defraud the policyholder or claimant with regard to a settlement or award from insurance proceeds shall be reported to the Colorado Division of Insurance within the Department of Regulatory Agencies.]
+      </p>
+      <br>
+      <p>
+        [Kentucky Any person who knowingly and with the intent to defraud any insurance company or other person files an application for insurance containing any materially false information or conceals, for the purpose of misleading, information concerning any fact material thereto commits a fraudulent insurance act, which is a crime.]
+      </p>
+      <br>
+      <p>
+          [Oklahoma WARNING: Any person who knowingly, and with intent to injure, defraud or deceive any insurer, makes any claim for the proceeds of an insurance policy containing any false, incomplete or misleading information is guilty of a felony.]
+      </p>
+      <br>
+      <p>[Oregon Any person who knowingly presents a materially false statement in an application for insurance may be guilty of a criminal offense and subject to penalties under state law.]</p>
+      <br>
+      <p>[Tennessee and Washington It is a crime to knowingly provide false, incomplete, or misleading information to an insurance company for the purpose of defrauding the company. Penalties may include imprisonment, fines or denial of insurance benefits.]</p>
+    </div>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:-25px;">
+    <div class="col-md-3" style="display:flex;flex-direction:row; justify-content:flex-end">
+        <input  type="submit"  value =" &#8592; Your Beneficiaries" class="button1" ng-click="prev()">
+    </div>
+    <div class="col-md-6">
+    </div>
+    <div class="col-md-3 right">
+        <input  type="submit"  value =" Sign and Pay &#8594;" class="button1" ng-click="next()">
+    </div>
+  </div>
+  <br><br><br>
+
+
+
+</div>

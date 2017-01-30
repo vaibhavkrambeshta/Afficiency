@@ -1,0 +1,28 @@
+.playground{
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  font-size: 16;
+  font-weight: bold;
+}
+
+.link_btn{
+  color : '#103d75';
+  cursor: pointer;
+  text-decoration: underline;
+}
+.para{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+input[type=text]{
+  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
+  background-color: white;
+  border-radius: 0px;
+  width: 180px;
+}

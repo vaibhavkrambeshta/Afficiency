@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Sign-Up/Login Form</title>
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="views/login_signup/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-fixed-top top-nav header_quote_page">
+      <div class="container-fluid ">
+          <div class="navbar-header">
+              <a href="#!/"><img src="views/registration_forms/images/logo.png" class="img" /></a>
+          </div>
+      </div>
+  </nav>
+  <div class="form" style="margin-top:120px !important;">
+    <div class="alert alert-success" style="font-size:14px;" ng-show="msg">
+      <strong>Registered Successfully! Please follow the link in your email to complete activation.</strong>
+      <a href="#!/">Click here to go back</a>
+    </div>
+    <div class="alert alert-danger" style="font-size:14px;" ng-show="err_msg">
+      <strong>{{message}}</strong>
+    </div>
+    <div>
+      <h1>Sign Up for Free</h1>
+        <div class="top-row">
+          <div class="field-wrap">
+            <label>
+              First Name<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" ng-model="fname"/>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Last Name<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" ng-model="lname"/>
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Email Address<span class="req">*</span>
+          </label>
+          <input type="text" required autocomplete="off" ng-model="email"/>
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Enter Password<span class="req">*</span>
+          </label>
+          <input type="password"required autocomplete="off" ng-model="password"/>
+        </div>
+
+        <button type="submit" class="button button-block" ng-click="register()">Register</button>
+
+        <div class="row" style="display:flex; flex-direction:row; justify-content:center;padding-top:10px;
+        color:white;font-size:12px;">
+            <input type="checkbox" ng-model="p.agree" style="width: 20px !important;" /><a>I agree with the privacy policy as well as the terms & conditions. "privacy policy" and "terms & conditions</a>
+        </div>
+        <div class="row" style="display:flex; flex-direction:row; justify-content:center;padding-top:10px;
+        color:white;font-size:12px;">
+          Already have an account? <a href="#!/login" style="cursor:pointer;margin-left:10px;">Click here to Login</a>
+        </div>
+    </div>
+  </div>
+</div> <!-- /form -->
+    <script src="views/login_signup/js/index.js"></script>
+
+</body>
+</html>

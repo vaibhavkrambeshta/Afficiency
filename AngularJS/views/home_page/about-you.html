@@ -1,0 +1,225 @@
+<link rel="stylesheet" type="text/css" href="/styles/page_about.css">
+<style>
+  .editable{
+    width: 100px;
+    height : 30px;
+    border: 1px solid grey;
+    color: black;
+  }
+</style>
+<div class="header_quote_page">
+  <img style="margin-right:20px" src="/images/logo/logo.png">
+  <p class="u-title" ng-show="auth"><span>Hi,</span>{{uname}}</p>
+</div>
+<div class='abt-cnt'>
+  <div class='abt-inner'>
+<div class='abt-header'>
+<h3>You are applying for <b>${{selected_premium_amount/1000}}K</b> of life insurence coverage for <b>{{seleted_premium_span}}</b> years</h3>
+<div class="progress-indi">
+<div class="container" style="width:100%;">
+
+
+            <div class="row bs-wizard" style="border-bottom:0;">
+
+                <div class="col-xs-3 bs-wizard-step active">
+                   <div class="text-center bs-wizard-stepnum"></div>
+                  <div class="progress" style="background:#1EAF77"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">About You</div>
+                </div>
+
+                <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
+                  <div class="text-center bs-wizard-stepnum"></div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">Your Health</div>
+                </div>
+
+                <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
+                  <div class="text-center bs-wizard-stepnum"></div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">Your Beneficlaries</div>
+                </div>
+            </div>
+
+</div>
+</div>
+</div>
+<div class="form">
+<form>
+<label class="sub-header">Honesty Declaration</label>
+<div class="row">
+<!--<div class="radio">
+  <label>
+    <input type="checkbox" ng-model="p.confirm">
+    <span class="lbl_text">I confirm that my name is {{p.name}}</span>
+  </label>
+</div>-->
+<div class="radio">
+  <label>
+    <input type="checkbox" ng-model="p.honest">
+    <span class="lbl_text">I promise to answer all questions in an honest and accurate way</span>
+  </label>
+</div>
+</div>
+<label class="sub-header">Basics</label>
+<div class="row">
+<div class="form-group col-md-4">
+    <label for="exampleInputName2">First Name</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="" ng-model="p.firstname">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="exampleInputEmail2">Middle Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="p.middlename">
+  </div>
+   <div class="form-group col-md-4">
+    <label for="exampleInputEmail2">Last Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="p.lastname">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="exampleInputEmail2">Date Of Birth</label>
+    <datepicker
+      button-prev='<i class="fa fa-arrow-circle-left"></i>'
+      button-next='<i class="fa fa-arrow-circle-right"></i>'
+      date-format='MM-dd-yyyy'>
+      <input ng-model="p.dob" type="text" class="font-fontawesome font-light radius3" placeholder="Choose a date"/>
+    </datepicker>
+  </div>
+  <div class="form-group col-md-4">
+    <label for="exampleInputEmail2">Place Of Birth</label>
+          <select ng-model="p.pob" class="form-control">
+                <option ng-repeat="all_state in state_ddl" value="{{all_state.state}}">
+                    {{all_state.state}}
+                </option>
+          </select>
+  </div>
+  <div class="form-group col-md-4">
+    <label for="exampleInputEmail2">Gender</label>
+    <!--<input type="text" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="p.gender">-->
+    <select name="singleSelect" id="singleSelect" ng-model="p.gender">
+      <option value="">---Please select---</option> <!-- not selected / blank option -->
+      <option value="Male">Male</option> <!-- interpolation -->
+      <option value="Female">Female</option>
+    </select>
+  </div>
+</div>
+
+<label class="sub-header">Contact info</label>
+<div class="row">
+<div class="form-group col-md-8">
+    <label for="exampleInputName2">Street Address</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="" ng-model="p.street_address">
+  </div>
+</div>
+<div class="row">
+  <div class="form-group col-md-3">
+    <label for="exampleInputEmail2">City</label>
+    <input type="text" class="form-control" placeholder="" ng-model="p.city">
+  </div>
+   <div class="form-group col-md-3">
+    <label for="exampleInputEmail2">State</label>
+    <!-- <input type="text" class="form-control" placeholder="" ng-model="p.state"> -->
+    <select ng-model="p.state" class="form-control">
+          <option ng-repeat="all_state in state_ddl" value="{{all_state.state}}">
+              {{all_state.state}}
+          </option>
+    </select>
+  </div>
+  <div class="form-group col-md-3">
+    <label for="exampleInputEmail2">ZIP Code</label>
+    <input type="text" class="form-control" placeholder="" ng-model="p.zip_code">
+  </div>
+   <div class="form-group col-md-3" ng-click="add_address($scope.p.city, $scope.p.state, $scope.p.zip_code)">
+    <div class="btn btn-lg btn-default btn-custom"><span class="glyphicon glyphicon-plus"></span> Add Address</div>
+   </div>
+</div>
+<div class="row" ng-repeat="a in p.addresses" style="padding-top:5px; font-size:14px;">
+  <div class="form-group col-md-3">
+      <label for="exampleInputName2">Street Address</label>
+      <input type="text" class="form-control" id="exampleInputName2" placeholder="" ng-model="a.street_address" readonly>
+    </div>
+  <div class="form-group col-md-3">
+    <label for="exampleInputEmail2">City</label>
+    <input type="text" class="form-control" placeholder="" ng-model="a.city" readonly>
+  </div>
+   <div class="form-group col-md-3">
+    <label for="exampleInputEmail2">State</label>
+    <input type="text" class="form-control" placeholder="" ng-model="a.state" readonly>
+  </div>
+  <div class="form-group col-md-3">
+    <label for="exampleInputEmail2">ZIP Code</label>
+    <input type="text" class="form-control" placeholder="" ng-model="a.zip_code" readonly>
+  </div>
+</div>
+
+  <div class="row" style="padding-top:20px;">
+    <div class="form-group col-md-4">
+      <label for="exampleInputEmail2">Phone Number</label>
+      <input type="number" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="p.phone_number">
+    </div>
+    <div class="form-group col-md-4 radio-cnt">
+      <label for="exampleInputEmail2">Type:&nbsp</label>
+      <label class="radio-inline">
+        <input type="radio" name="resp" ng-model="mobile_phone" value="true" ng-click="setChoice('mobile_phone')"> Mobile
+      </label>
+  <label class="radio-inline">
+    <input type="radio" name="resp" value="false" ng-model="home_phone" ng-click="setChoice('home_phone')"> Home
+  </label>
+  <label class="radio-inline">
+    <input type="radio" name="resp" value="false" ng-model="work_phone" ng-click="setChoice('work_phone')"> Work
+  </label>
+    </div>
+    <div class="form-group col-md-4" ng-click="add_phone()">
+      <div class="btn btn-lg btn-default btn-custom"><span class="glyphicon glyphicon-plus"></span> Add Phone</div>
+     </div>
+  </div>
+
+  <div class="row" style="padding-top:20px;" ng-repeat="(x,y) in p.display_phones">
+    <div class="form-group col-md-4">
+      <label for="exampleInputEmail2">{{x}}</label>
+      <!--<label for="exampleInputEmail2">Phone Number</label>
+      <input type="text" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="a.phone_number">-->
+    </div>
+    <div class="form-group col-md-4">
+      <label for="exampleInputEmail2"><b>{{y}}</b></label>
+      <!--<label for="exampleInputEmail2">Type</label>
+      <input type="text" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="a.number_type">-->
+    </div>
+  </div>
+
+
+ <div class="row" style="padding-top:20px;">
+  <div class="form-group col-md-6">
+    <label for="exampleInputEmail2">Email</label>
+    <input type="text" class="form-control" id="exampleInputEmail2" ng-model="p.email">
+  </div>
+</div>
+<label class="sub-header">License and Social Security</label>
+<div class="row" style="margin-bottom:30px;">
+<div class="form-group col-md-4">
+    <label for="exampleInputName2">Drivers License</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="" ng-model="p.drivers_license">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="exampleInputEmail2">State Issued</label>
+    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="p.state_issued">
+  </div>
+   <div class="form-group col-md-4">
+    <label for="exampleInputEmail2">Social Security Number</label>
+    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="" ng-model="p.ssn">
+  </div>
+</div>
+
+</form>
+</div>
+<div class="row button-grp">
+<div>
+    <input  type="submit"  value =" &#8592; Go Back" class="button1" ng-click="back()">
+  </div>
+  <div class="right">
+    <input  type="submit"  value =" Your Health &#8594;" class="button1" ng-click="next()">
+  </div>
+  </div>
+</div>
+</div>

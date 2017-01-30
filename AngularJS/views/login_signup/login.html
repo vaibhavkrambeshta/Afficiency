@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Sign-Up/Login Form</title>
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="views/login_signup/css/style.css">
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-fixed-top top-nav header_quote_page">
+      <div class="container-fluid ">
+          <div class="navbar-header">
+              <a href="#!/"><img src="views/registration_forms/images/logo.png" class="img" /></a>
+          </div>
+      </div>
+  </nav>
+  <div class="form" style="margin-top:120px !important;">
+    <div class="alert alert-danger" style="font-size:14px;" ng-show="err_msg">
+      <strong>{{message}}</strong>
+    </div>
+    <div>
+      <h1>Login</h1>
+
+        <div class="field-wrap">
+          <label>
+            Email Address<span class="req">*</span>
+          </label>
+          <input type="email" required autocomplete="off" ng-model="email"
+          style="width:100%;max-width:800px;"/>
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Enter Password<span class="req">*</span>
+          </label>
+          <input type="password" required autocomplete="off" ng-model="password"
+          style="width:100%;max-width:800px;"/>
+        </div>
+
+        <button type="submit" class="button button-block" ng-click="login()">Login</button>
+        <div class="row" style="display:flex; flex-direction:row; justify-content:center;padding-top:10px;
+        color:white;font-size:12px;">
+          Don't have an account? <a href="#!/signup" style="cursor:pointer;margin-left:10px;">Click here to register</a>
+        </div>
+    </div>
+  </div>
+</div> <!-- /form -->
+    <script src="views/login_signup/js/index.js"></script>
+
+</body>
+</html>

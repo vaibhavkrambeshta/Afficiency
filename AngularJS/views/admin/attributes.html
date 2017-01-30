@@ -1,0 +1,138 @@
+<div class="admin_page">
+  <main-nav></main-nav>
+  <div class="admin_body">
+    <uib-tabset active="activeJustified" justified="true">
+      <uib-tab index="0" heading="Attributes" class="tab_body">
+        <div class="row">
+          <br>
+        </div>
+        <div class="row">
+          <div class="col-md-6 form-group">
+              <label>Attribute Name</label>
+              <input class="form-control" type="text" ng-model="att.name"/>
+          </div>
+          <div class="col-md-6 form-group">
+              <label>Data Type</label>
+              <input class="form-control" type="text" ng-model="att.data_type"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 form-group">
+              <label>Description</label>
+              <textarea class="form-control" type="text" ng-model="att.desc"/>
+          </div>
+          <div class="col-md-6 form-group">
+              <label>Attribute Source</label>
+              <select ng-model="att.source">
+                <option value="Analyst/ML">Analyst/ML</option>
+                <option value="Customer">Customer</option>
+              </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <span style="font-weight:bold;padding-right:5px;">Used In GUI</span>  <switch id="enabled" name="enabled" ng-model="att.in_gui" class="green"></switch>
+          </div>
+          <div class="col-md-3">
+            <span style="font-weight:bold;padding-right:5px;">Display Only</span> <switch id="enabled" name="enabled" ng-model="att.display_only" class="green"></switch>
+          </div>
+          <div class="col-md-3">
+            <span style="font-weight:bold;padding-right:5px;">Legal Related</span> <switch id="enabled" name="enabled" ng-model="att.legal_related" class="green"></switch>
+          </div>
+          <div class="col-md-3">
+            <span style="font-weight:bold;padding-right:5px;">Document Flag</span> <switch id="enabled" name="enabled" ng-model="att.document_flag" class="green"></switch>
+          </div>
+        </div>
+        <div class="row" style="padding-top: 30px;">
+          <div class="col-md-3">
+            <span style="font-weight:bold;padding-right:5px;">Personalizable Flag</span>  <switch id="enabled" name="enabled" ng-model="att.p_flag" class="green"></switch>
+          </div>
+          <div class="col-md-3">
+            <span style="font-weight:bold;padding-right:5px;">Default Label</span>  <switch id="enabled" name="enabled" ng-model="att.default_label" class="green"></switch>
+          </div>
+          <div class="col-md-6" style="text-align: end;
+            padding-right: 50px;
+            padding-top: 20px;">
+            <button class="btn btn-success" ng-click="add_attribute()"> Add Attribute </button>
+          </div>
+        </div>
+        <div class="row" style="padding-top:30px;overflow-x:scroll;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th style="width:15%">Name</th>
+                <th style="width:20%">Description</th>
+                <th>Data Type</th>
+                <th>Source</th>
+                <th>Used in GUI</th>
+                <th>Display Only</th>
+                <th>Legal Related</th>
+                <th>Doc Flag</th>
+                <th>Personalized Flag</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="i in attributes">
+                <td>{{i.name}}</td>
+                <td>{{i.description}}</td>
+                <td>{{i.data_type}}</td>
+                <td>{{i.source}}</td>
+                <td>{{i.used_in_gui}}</td>
+                <td>{{i.display_only}}</td>
+                <td>{{i.legal_related}}</td>
+                <td>{{i.doc_flag}}</td>
+                <td>{{i.p_flag}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </uib-tab>
+
+      <uib-tab index="1" heading="Attribute Labels">
+        <div class="row">
+          <div class="col-md-6">
+            <label>Attribute</label>
+            <select ng-model="att.attribute_list">
+              <option ng-repeat="option in attributes" ng-value="option.id">{{option.name}}</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label>Display Text</label>
+            <input type="text" ng-model="att.display_text">
+          </div>
+        </div>
+        <div class="row" style="padding-top:30px;">
+          <div class="col-md-3">
+            <span style="font-weight:bold;padding-right:5px;">Is Default</span>  <switch id="enabled" name="enabled" ng-model="att.is_default" class="green"></switch>
+          </div>
+          <div class="col-md-6" style="text-align: end;
+            padding-right: 50px;
+            padding-top: 20px;">
+            <button class="btn btn-success" ng-click="add_attribute_labels()"> Add Attribute </button>
+          </div>
+        </div>
+        <br><br>
+        <div class="row">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Attribute Name</th>
+                <th>Label display text</th>
+                <th>Is Default</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="i in attribute_labels">
+                <td>{{i.attribute_name}}</td>
+                <td>{{i.display}}</td>
+                <td>{{i.is_default}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </uib-tab>
+    </uib-tabset>
+  </div>
+</div>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Starter Template for Bootstrap</title>
+    <!-- Custom styles for this template -->
+    <script src="views/customer_service/js/bootstrap.min.js"></script>
+    <!--     <script src="views/customer_service/js/moment.min.js"></script> -->
+    <link href="views/customer_service/css/starter-template.css" rel="stylesheet">
+    <link href="views/admin/css/admin.css" rel="stylesheet">
+    <!-- <script src="views/registration_forms/jquery_v3_1_1.min.js"></script> -->
+
+
+
+</head>
+
+
+<body class="skin-black">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top top-nav">
+        <div class="container-fluid ">
+            <div class="navbar-header">
+                <img src="views/registration_forms/images/logo.png" class="img" />  
+            </div>
+            <div class="navbar-right ">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span>Jane Doe <i class="caret"></i></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="user-header bg-light-blue">
+                                <img alt="User Image" class="img-circle" src="views/registration_forms/img/avatar3.png">
+                                <p>
+                                    Jane Doe - Web Developer
+                                    <small>Member since Nov. 2012</small>
+                                </p>
+                            </li>
+                            <li class="user-body">
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Followers</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Sales</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Friends</a>
+                                </div>
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a class="btn btn-default btn-flat" href="#">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a class="btn btn-default btn-flat" href="#">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div> </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+  <div class="container-fluid" id="admin-e">
+    <div class="row" style="height:60px;">
+      <div class="main-header"><span class="col-md-3" > Afficient++: Configuration</span>
+        <div class="col-md-1"><a href="#!/experience_page" style="text-decoration: none;"><img style="margin-left:10px" src="views/admin/img/logo1.png">
+         <p>Experiences</p></a>
+     </div>
+     <div class="col-md-1"><a href="#!/global_attributes" style="text-decoration: none;"><img style="margin-left:15px"  src="views/admin/img/logo2.png"><p>Global Attributes</p></a>
+     </div>
+     <div class="col-md-1" style="padding-left: 30px;"><a href="#!/designs" style="text-decoration: none;"><img src="views/admin/img/logo3.png"><p>Designs</p></a>
+     </div>
+     <div class="col-md-1"><a href="#!/personalization" style="text-decoration: none;"><img style="margin-left:15px"  src="views/admin/img/logo4.png"><p>Personalization</p></a>
+     </div>
+ </div>
+</div>
+<div class="row sub-header" style="height:60px;" >
+  <div class="pull-left"><img src="views/admin/img/logo4.png"><span>Page & Design Personalization </span></div>
+  <div class="pull-right"><button onclick="$('#addExperience').modal('show');" class="btn btn-info" style="background-color: rgb(27, 188, 160); border:none;">+ New Configuration</button></div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Experience</th>
+      <th>Experience Step</th>
+      <th>M/L Personalization %</th>
+      <th>Random Personalization %</th>
+      <th>Start Date</th>
+      <th>End Date</th>    
+      <th>Action</th> 
+  </tr>
+</thead>
+<tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>75%</td>
+      <td><a href="#!/personal-page-2"> 25%</a></td>         
+      <td></td>
+      <td></td>
+      <td><img src="views/customer_service/img/edit.png"><img src="views/customer_service/img/delete.png"></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+</div>
+
+
+
+<!-- modal part -->
+<!-- payModal -->
+<div class="modal fade" id="addExperience" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content ">
+            <div class="container-fluid">              
+                <div class="modal-body row" >
+                    <h2 style="text-align:center;">Please add details for the new configuration </h2>
+                    <hr class="modal-hr">
+                    <div class="col-md-12 col-md-offset-0 pay-content"> 
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput">Experience</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput">Experience step</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput">ML Personalization %</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput">
+                            </div>
+                            <div class="form-group col-md-6">
+                               <label for="formGroupExampleInput">Random Personalization %
+                                </label>
+                                <input type="text" class="form-control" id="formGroupExampleInput">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput">Start Date
+                                </label>
+                                <input type="text" class="form-control" id="formGroupExampleInput">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="formGroupExampleInput">End Date
+                                </label>
+                                <input type="text" class="form-control" id="formGroupExampleInput">
+                            </div>                                                        
+                  
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" id="confirm-method">Add</button>
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- end of modal part -->
+
+</body>    

@@ -1,0 +1,4 @@
+node_modules/
+.idea/
+/AngularJS/bower_components/
+/AngularJS/node_modules/
