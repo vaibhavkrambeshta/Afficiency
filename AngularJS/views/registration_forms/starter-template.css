@@ -1126,6 +1126,7 @@ Dropdown menus
     font-size: 12px;
     background: transparent;
     color: #97a0b3;
+    margin-top: 25px;
 }
 .open .btn-box-tool,
 .btn-box-tool:hover {
